@@ -1,0 +1,12 @@
+{
+  "Home": {
+    "title": "TsunaDev is a front-end developer",
+    "description": "I craft responsive websites where technologies meet creativity"
+  },
+  "Header": {
+    "home": "home",
+    "about-me": "about-me",
+    "projects": "projects",
+    "contacts": "contacts"
+  }
+}
