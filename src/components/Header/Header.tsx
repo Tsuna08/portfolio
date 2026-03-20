@@ -1,22 +1,28 @@
 "use client";
 
-import { Link } from "@/src/i18n/navigation";
+import cn from "clsx";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import LanguageSwitcher from "../LanguageSwitcher";
+
+import { routes } from "@/src/constants/routes";
+import { Link, usePathname } from "@/src/i18n/navigation";
+import { LanguageSwitcher } from "../LanguageSwitcher";
+import classes from "./Header.module.scss";
 
 export const Header = () => {
+  const pathname = usePathname();
   const t = useTranslations("Header");
+
   const links = [
-    { name: t("home"), url: "/" },
-    { name: t("projects"), url: "/projects" },
-    { name: t("about-me"), url: "/about" },
-    { name: t("contacts"), url: "/contacts" },
+    { name: t("home"), url: routes.root },
+    { name: t("projects"), url: routes.projects },
+    { name: t("about-me"), url: routes.about },
+    { name: t("contacts"), url: routes.contacts },
   ];
 
   return (
-    <header>
-      <Link href="/">
+    <header className={classes.header}>
+      <Link href="/" className={classes.logo}>
         <Image
           className="dark"
           src="/logo.svg"
@@ -25,13 +31,19 @@ export const Header = () => {
           height={16}
           priority
         />
-        <span> TsunaDev</span>
+        <h3 className={classes.label}> TsunaDev</h3>
       </Link>
-      <div>
-        <nav>
+      <div className={classes.controlUnit}>
+        <nav className={classes.navigation}>
           {links.map((item) => (
-            <Link key={item.name} href={item.url}>
-              <span>#</span>
+            <Link
+              key={item.name}
+              href={item.url}
+              className={cn(classes.link, {
+                [classes.active]: pathname === item.url,
+              })}
+            >
+              <span className={classes.sharp}>#</span>
               {item.name}
             </Link>
           ))}

@@ -1,0 +1,64 @@
+.select {
+  appearance: base-select;
+  flex: 1;
+  background: transparent;
+  color: var(--secondary-color);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    outline-offset: 0;
+    outline: none;
+    background: var(--background);
+    color: var(--color);
+  }
+
+  &::picker-icon {
+    content: "";
+    -webkit-mask: url(../../../public/arrow.svg) no-repeat center/contain;
+    mask: url(../../../public/arrow.svg) no-repeat center/contain;
+    mask-size: 5px;
+    background-color: var(--secondary-color);
+    width: 8px;
+    height: 10px;
+    rotate: 90deg;
+    transition: 0.5s rotate;
+  }
+
+  &:hover::picker-icon {
+    background-color: var(--color);
+  }
+
+  &:open::picker-icon {
+    rotate: 270deg;
+  }
+}
+
+::picker(select) {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background: var(--background);
+  appearance: base-select;
+  width: 20px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  background: var(--background);
+  color: var(--secondary-color);
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    outline: 0;
+    color: var(--color);
+  }
+
+  &::checkmark {
+    display: none;
+  }
+}
