@@ -1,0 +1,53 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10% 0 8%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 537px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  span,
+  p {
+    color: var(--primary-color);
+  }
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.bottomImg {
+  display: block;
+}
+
+.topTmg {
+  position: absolute;
+  top: 35%;
+  right: -8%;
+  z-index: -1;
+}
+
+.dotsTmg {
+  position: absolute;
+  bottom: 5%;
+  left: -23%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--primary-color);
+  mask: url("/dots.svg") no-repeat center / contain;
+  -webkit-mask: url("/dots.svg") no-repeat center / contain;
+}

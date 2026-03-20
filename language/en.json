@@ -1,7 +1,9 @@
 {
   "Home": {
-    "title": "TsunaDev is a front-end developer",
-    "description": "I craft responsive websites where technologies meet creativity"
+    "title": "TsunaDev is a",
+    "colorTitle": "front-end developer",
+    "description": "I craft responsive websites where technologies meet creativity",
+    "contactBtn": "Contact me!"
   },
   "Header": {
     "home": "home",

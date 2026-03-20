@@ -6,7 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { Fira_Code } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import { Header } from "@/src/components/Header";
+import { Header } from "@/src/components";
 import { Locale, locales } from "@/src/i18n/config";
 
 const validLocales = new Set<string>(locales);
