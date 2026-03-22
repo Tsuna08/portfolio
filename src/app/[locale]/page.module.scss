@@ -1,10 +1,36 @@
-.section {
+.mainSection,
+.sectionTitle {
   width: 100%;
   height: 100vh;
   display: flex;
+  padding: 0 10% 0 8%;
+}
+
+.mainSection {
   justify-content: space-between;
   align-items: center;
-  padding: 0 10% 0 8%;
+}
+
+.sectionTitle {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 515px;
+  gap: 1rem;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .info {
@@ -41,7 +67,7 @@
   z-index: -1;
 }
 
-.dotsTmg {
+.dotsImg {
   position: absolute;
   bottom: 5%;
   left: -23%;
@@ -50,4 +76,30 @@
   background-color: var(--primary-color);
   mask: url("/dots.svg") no-repeat center / contain;
   -webkit-mask: url("/dots.svg") no-repeat center / contain;
+}
+
+.aboutMePhoto {
+  border-bottom: 1px solid var(--primary-color);
+  padding: 0 1rem;
+  display: block;
+}
+
+.aboutMeDotsImg {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background-color: var(--secondary-color);
+  mask: url("/dots.svg") no-repeat center / contain;
+  -webkit-mask: url("/dots.svg") no-repeat center / contain;
+  z-index: 10;
+}
+
+.leftDotsTmg {
+  bottom: -84%;
+  right: 32%;
+}
+
+.leftRightTmg {
+  bottom: -70%;
+  right: 11%;
 }

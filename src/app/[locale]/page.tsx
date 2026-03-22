@@ -1,4 +1,5 @@
-import { Button } from "@/src/components";
+import { Button, TitleSection } from "@/src/components";
+import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import classes from "./page.module.scss";
@@ -9,19 +10,23 @@ interface HomeProps {
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
-
   setRequestLocale(locale);
-  const t = await getTranslations("Home");
+
+  const tHome = await getTranslations("Home");
+  const tTitle = await getTranslations("Header");
+  const tAbout = await getTranslations("AboutSection");
+  const intro: string[] = tAbout.raw("intro");
 
   return (
     <>
-      <section className={classes.section}>
+      {/* Приветствие */}
+      <section className={classes.mainSection}>
         <div className={classes.info}>
           <h1>
-            {t("title")} <span>{t("colorTitle")}</span>
+            {tHome("title")} <span>{tHome("colorTitle")}</span>
           </h1>
-          <p>{t("description")}</p>
-          <Button>{t("contactBtn")}</Button>
+          <p>{tHome("description")}</p>
+          <Button>{tHome("contactBtn")}</Button>
         </div>
         <div className={classes.container}>
           <Image
@@ -40,10 +45,32 @@ export default async function Home({ params }: HomeProps) {
             height={150}
             priority
           />
-          <div className={classes.dotsTmg} />
+          <div className={classes.dotsImg} />
         </div>
       </section>
-      <section className={classes.section}></section>
+
+      {/* Секция – обо мне */}
+      <section className={classes.sectionTitle}>
+        <TitleSection title={tTitle("about-me")} />
+        <div className={classes.section}>
+          <div className={classes.sectionColumn}>
+            {intro.map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+            <Button>{tAbout("readMoreBtn")}</Button>
+          </div>
+          <Image
+            className={cn(classes.aboutMePhoto, classes.container)}
+            src="/photo.png"
+            alt="About me photo"
+            width={357}
+            height={500}
+            priority
+          />
+          <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
+          <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
+        </div>
+      </section>
     </>
   );
 }
@@ -53,8 +80,7 @@ export async function generateMetadata({ params }: HomeProps) {
   const t = await getTranslations({ locale, namespace: "Home" });
 
   return {
-    title: t("title"),
-    colorTitle: t("colorTitle"),
+    title: `${t("title")} ${t("colorTitle")}`,
     description: t("description"),
   };
 }

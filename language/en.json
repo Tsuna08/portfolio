@@ -5,6 +5,14 @@
     "description": "I craft responsive websites where technologies meet creativity",
     "contactBtn": "Contact me!"
   },
+  "AboutSection": {
+    "intro": [
+      "Hello, i’m TsunaDev. My name is Tsyganova Anna!",
+      "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
+      "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
+    ],
+    "readMoreBtn": "Read more ->"
+  },
   "Header": {
     "home": "home",
     "about-me": "about-me",
