@@ -1,4 +1,5 @@
 import { Button, TitleSection } from "@/src/components";
+import { Link } from "@/src/i18n/navigation";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -15,6 +16,7 @@ export default async function Home({ params }: HomeProps) {
   const tHome = await getTranslations("Home");
   const tTitle = await getTranslations("Header");
   const tAbout = await getTranslations("AboutSection");
+  const tContacts = await getTranslations("Contacts");
   const intro: string[] = tAbout.raw("intro");
 
   return (
@@ -53,7 +55,7 @@ export default async function Home({ params }: HomeProps) {
       <section className={classes.sectionTitle}>
         <TitleSection title={tTitle("about-me")} />
         <div className={classes.section}>
-          <div className={classes.sectionColumn}>
+          <div className={cn(classes.sectionColumn, classes.textSection)}>
             {intro.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
             ))}
@@ -69,6 +71,41 @@ export default async function Home({ params }: HomeProps) {
           />
           <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
           <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
+        </div>
+      </section>
+
+      {/* Контакты */}
+      <section className={classes.sectionTitle}>
+        <TitleSection title={tTitle("contacts")} />
+        <div className={classes.section}>
+          <p className={classes.textSection}>{tContacts("intro")}</p>
+          <div className={classes.contacts}>
+            <h6>{tContacts("title")}</h6>
+
+            <Link
+              href={"mailto:" + tContacts("email")}
+              className={classes.link}
+            >
+              <Image
+                src="/email.svg"
+                alt="Email icon"
+                width={32}
+                height={32}
+                priority
+              />
+              {tContacts("email")}
+            </Link>
+            <Link href={tContacts("telegram")} className={classes.link}>
+              <Image
+                src="/telegram.svg"
+                alt="Telegram icon"
+                width={32}
+                height={32}
+                priority
+              />
+              {tContacts("telegramNick")}
+            </Link>
+          </div>
         </div>
       </section>
     </>

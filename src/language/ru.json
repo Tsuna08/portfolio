@@ -13,6 +13,15 @@
     ],
     "readMoreBtn": "Подробнее ->"
   },
+  "Contacts": {
+    "title": "Напишите мне",
+    "intro": "Меня интересуют возможности работы фрилансером. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
+    "email": "anna.tsyganova.dev@gmail.com",
+    "git": "https://github.com/Tsuna08",
+    "telegram": "https://t.me/tsuna_dev",
+    "telegramNick": "@tsuna_dev",
+    "linkedIn": "https://www.linkedin.com/in/anna-tsyganova/"
+  },
   "Header": {
     "home": "главная",
     "about-me": "обо-мне",

@@ -7,7 +7,8 @@ import classes from "./Footer.module.scss";
 
 export const Footer = () => {
   const t = useTranslations("Footer");
-  const mailto = "anna.tsyganova.dev@gmail.com";
+  const tContacts = useTranslations("Contacts");
+  const email = tContacts("email");
 
   return (
     <footer className={classes.footer}>
@@ -26,8 +27,8 @@ export const Footer = () => {
                 />
                 TsunaDev
               </h6>
-              <a className={classes.link} href={"mailto:" + { mailto }}>
-                {mailto}
+              <a className={classes.link} href={"mailto:" + { email }}>
+                {tContacts("email")}
               </a>
             </div>
             <p>{t("description")}</p>
@@ -36,7 +37,7 @@ export const Footer = () => {
         <div className={classes.info}>
           <h5 className={classes.media}>{t("media")}</h5>
           <div className={classes.contacts}>
-            <Link href="https://github.com/Tsuna08">
+            <Link href={tContacts("git")}>
               <Image
                 className="dark"
                 src="/git.svg"
@@ -46,7 +47,7 @@ export const Footer = () => {
                 priority
               />
             </Link>
-            <Link href="https://t.me/tsuna_dev">
+            <Link href={tContacts("telegram")}>
               <Image
                 className="dark"
                 src="/telegram.svg"
@@ -56,7 +57,7 @@ export const Footer = () => {
                 priority
               />
             </Link>
-            <Link href="https://www.linkedin.com/in/anna-tsyganova/">
+            <Link href={tContacts("linkedIn")}>
               <Image
                 className="dark"
                 src="/linkedIn.svg"
