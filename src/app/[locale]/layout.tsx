@@ -6,8 +6,9 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { Fira_Code } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import { Header } from "@/src/components";
 import { Locale, locales } from "@/src/i18n/config";
+import { Header } from "@/src/widget";
+import { Footer } from "@/src/widget/Footer";
 
 const validLocales = new Set<string>(locales);
 
@@ -46,6 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

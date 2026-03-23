@@ -18,5 +18,10 @@
     "about-me": "обо-мне",
     "projects": "проекты",
     "contacts": "контакты"
+  },
+  "Footer": {
+    "media": "Медиа",
+    "madeBy": "Создано TsunaDev",
+    "description": "Front-end разработчик"
   }
 }

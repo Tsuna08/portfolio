@@ -18,5 +18,10 @@
     "about-me": "about-me",
     "projects": "projects",
     "contacts": "contacts"
+  },
+  "Footer": {
+    "media": "Media",
+    "madeBy": "Made by TsunaDev",
+    "description": "Front-end developer"
   }
 }
