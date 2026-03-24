@@ -13,6 +13,17 @@
     ],
     "readMoreBtn": "Подробнее ->"
   },
+  "Skills": {
+    "skills": [
+      { "title": "Фреймворки", "list": ["React", "Vue"] },
+      { "title": "Другое", "list": ["HTML", "CSS", "SCSS", "REST"] },
+      { "title": "Языки", "list": ["TypeScript", "JavaScript"] },
+      {
+        "title": "Инструменты",
+        "list": ["VSCode", "Figma", "Git", "Font Awesome"]
+      }
+    ]
+  },
   "Contacts": {
     "title": "Напишите мне",
     "intro": "Меня интересуют возможности работы фрилансером. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
@@ -26,7 +37,8 @@
     "home": "главная",
     "about-me": "обо-мне",
     "projects": "проекты",
-    "contacts": "контакты"
+    "contacts": "контакты",
+    "skills": "навыки"
   },
   "Footer": {
     "media": "Медиа",

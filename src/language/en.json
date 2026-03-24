@@ -13,6 +13,14 @@
     ],
     "readMoreBtn": "Read more ->"
   },
+  "Skills": {
+    "skills": [
+      { "title": "Frameworks", "list": ["React", "Vue"] },
+      { "title": "Other", "list": ["HTML", "CSS", "SCSS", "REST"] },
+      { "title": "Languages", "list": ["TypeScript", "JavaScript"] },
+      { "title": "Tools", "list": ["VSCode", "Figma", "Git", "Font Awesome"] }
+    ]
+  },
   "Contacts": {
     "title": "Message me here",
     "intro": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
@@ -26,7 +34,8 @@
     "home": "home",
     "about-me": "about-me",
     "projects": "projects",
-    "contacts": "contacts"
+    "contacts": "contacts",
+    "skills": "skills"
   },
   "Footer": {
     "media": "Media",

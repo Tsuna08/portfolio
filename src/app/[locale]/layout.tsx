@@ -10,6 +10,8 @@ import { Locale, locales } from "@/src/i18n/config";
 import { Header } from "@/src/widget";
 import { Footer } from "@/src/widget/Footer";
 
+import classes from "./layout.module.scss";
+
 const validLocales = new Set<string>(locales);
 
 function isValidLocale(locale: string): locale is Locale {
@@ -46,7 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className={`${firaCode.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>{children}</main>
+          <main className={classes.main}>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

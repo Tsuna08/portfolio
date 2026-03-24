@@ -1,5 +1,7 @@
 import { Button, TitleSection } from "@/src/components";
 import { Link } from "@/src/i18n/navigation";
+import { SkillBox } from "@/src/shared";
+import { AboutMe } from "@/src/widget/AboutMe";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -15,9 +17,9 @@ export default async function Home({ params }: HomeProps) {
 
   const tHome = await getTranslations("Home");
   const tTitle = await getTranslations("Header");
-  const tAbout = await getTranslations("AboutSection");
   const tContacts = await getTranslations("Contacts");
-  const intro: string[] = tAbout.raw("intro");
+  const tSkills = await getTranslations("Skills");
+  const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
 
   return (
     <>
@@ -51,28 +53,48 @@ export default async function Home({ params }: HomeProps) {
         </div>
       </section>
 
-      {/* Секция – обо мне */}
+      {/* Навыки */}
       <section className={classes.sectionTitle}>
-        <TitleSection title={tTitle("about-me")} />
+        <TitleSection title={tTitle("skills")} />
         <div className={classes.section}>
-          <div className={cn(classes.sectionColumn, classes.textSection)}>
-            {intro.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-            <Button>{tAbout("readMoreBtn")}</Button>
+          <div className={cn(classes.section, classes.containerGrid)}>
+            <Image
+              className={classes.boxDots1}
+              src="/dots.svg"
+              alt="Dots picture"
+              width={63}
+              height={63}
+              priority
+            />
+            <Image
+              className={classes.boxDots2}
+              src="/dots.svg"
+              alt="Dots picture"
+              width={63}
+              height={63}
+              priority
+            />
+            <Image
+              className={classes.boxLogo}
+              src="/outline_logo.svg"
+              alt="Outline logo icon"
+              width={113}
+              height={113}
+              priority
+            />
+            <div className={classes.box} />
+            <div className={classes.smallBox} />
           </div>
-          <Image
-            className={cn(classes.aboutMePhoto, classes.container)}
-            src="/photo.png"
-            alt="About me photo"
-            width={357}
-            height={500}
-            priority
-          />
-          <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
-          <div className={cn(classes.aboutMeDotsImg, classes.leftDotsTmg)} />
+          <div className={cn(classes.skillsSection)}>
+            {skills.map((item, index) => (
+              <SkillBox key={index} title={item.title} list={item.list} />
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Секция – обо мне */}
+      <AboutMe />
 
       {/* Контакты */}
       <section className={classes.sectionTitle}>

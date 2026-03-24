@@ -1,0 +1,22 @@
+.box {
+  border: 1px solid var(--secondary-color);
+  min-width: 173px;
+  max-width: 196px;
+}
+
+.title {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0.5rem;
+}
+
+.skill {
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}

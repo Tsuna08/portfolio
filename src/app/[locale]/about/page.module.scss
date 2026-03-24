@@ -1,0 +1,15 @@
+.skills {
+  margin-top: 3rem;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
