@@ -35,11 +35,17 @@
     "about-me": "about-me",
     "projects": "projects",
     "contacts": "contacts",
-    "skills": "skills"
+    "skills": "skills",
+    "subTitle": "Who I am?"
   },
   "Footer": {
     "media": "Media",
     "madeBy": "Made by TsunaDev",
     "description": "Front-end developer"
+  },
+  "NotFound": {
+    "title": "404",
+    "description": "Page not found",
+    "backHome": "Back to home ->"
   }
 }

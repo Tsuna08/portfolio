@@ -12,20 +12,21 @@ export default async function About({ params }: AboutProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const tHeader = await getTranslations("Header");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
 
   return (
-    <>
+    <div className={classes.container}>
       <AboutMe
         preTitle="/"
-        subTitle="Who I am?"
+        subTitle={tHeader("subTitle")}
         showLine={false}
         showReadMore={false}
       />
       <div className={classes.box}>
         <div>
-          <Title title="skills" />
+          <Title title={tHeader("skills")} />
           <div className={classes.skills}>
             {skills.map((item, index) => (
               <SkillBox key={index} title={item.title} list={item.list} />
@@ -33,6 +34,6 @@ export default async function About({ params }: AboutProps) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

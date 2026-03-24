@@ -38,11 +38,17 @@
     "about-me": "обо-мне",
     "projects": "проекты",
     "contacts": "контакты",
-    "skills": "навыки"
+    "skills": "навыки",
+    "subTitle": "Кто я?"
   },
   "Footer": {
     "media": "Медиа",
     "madeBy": "Создано TsunaDev",
     "description": "Front-end разработчик"
+  },
+  "NotFound": {
+    "title": "404",
+    "description": "Страница не найдена",
+    "backHome": "Вернуться на главную ->"
   }
 }

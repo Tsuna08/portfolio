@@ -3,8 +3,12 @@
   height: 61px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding: 0.5rem 10% 0.5rem 8%;
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {

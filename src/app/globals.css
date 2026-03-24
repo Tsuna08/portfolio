@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #282c33;
+  --background: #292b31;
+  --background-main: #2d3035;
   --foreground: #ededed;
   --color: #ffffff;
   --primary-color: #c778dd;
@@ -10,17 +11,18 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #ededed;
-    --foreground: #282c33;
+    --background: #f3f3f3;
+    --background-main: #fcfcfc;
+    --foreground: #616161;
     --color: #000000;
-    --primary-color: #8e4ca1;
-    --secondary-color: #888d99;
+    --primary-color: #a51fce;
+    --secondary-color: #656a6e;
   }
 }
 
 body {
   width: 100%;
-  background: var(--background);
+  background: var(--background-main);
   color: var(--foreground);
   font-family: var(--font-fira-code);
 }
