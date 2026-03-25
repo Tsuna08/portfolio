@@ -1,7 +1,5 @@
-import { Button, TitleSection } from "@/src/components";
 import { Link } from "@/src/i18n/navigation";
-import { SkillBox } from "@/src/shared";
-import { AboutMe } from "@/src/widget/AboutMe";
+import { Button, SkillBox, TitleSection } from "@/src/shared";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -10,6 +8,7 @@ import Email from "../../../public/email.svg";
 import OutlineLogo from "../../../public/outline_logo.svg";
 import Telegram from "../../../public/telegram.svg";
 import classes from "./page.module.scss";
+import { AboutMe } from "@/src/widget";
 
 interface HomeProps {
   params: Promise<{ locale: string }>;

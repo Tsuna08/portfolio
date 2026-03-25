@@ -3,9 +3,9 @@
 import cn from "clsx";
 import { useTranslations } from "next-intl";
 
-import { LanguageSwitcher } from "@/src/components";
 import { routes } from "@/src/constants/routes";
 import { Link, usePathname } from "@/src/i18n/navigation";
+import { LanguageSwitcher } from "@/src/shared";
 import Logo from "../../../public/logo.svg";
 import classes from "./Header.module.scss";
 
