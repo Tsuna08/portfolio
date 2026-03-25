@@ -38,7 +38,7 @@ export const AboutMe = ({
           ))}
           {showReadMore && (
             <Link href="/about">
-              <Button>{tAbout("readMoreBtn")}</Button>
+              <Button>{tAbout("readMoreBtn") + " ->"}</Button>
             </Link>
           )}
         </div>

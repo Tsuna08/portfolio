@@ -3,7 +3,7 @@
     "title": "TsunaDev is a",
     "colorTitle": "front-end developer",
     "description": "I craft responsive websites where technologies meet creativity",
-    "contactBtn": "Contact me!"
+    "contactBtn": "Contact me"
   },
   "AboutSection": {
     "intro": [
@@ -11,11 +11,18 @@
       "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
-    "readMoreBtn": "Read more ->"
+    "readMoreBtn": "Read more"
+  },
+  "Projects": {
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "You're using it right now",
+      "labelBtn": "GitHub"
+    }
   },
   "Skills": {
     "skills": [
-      { "title": "Frameworks", "list": ["React", "Vue"] },
+      { "title": "Frameworks", "list": ["React", "Vue", "Next.JS"] },
       { "title": "Other", "list": ["HTML", "CSS", "SCSS", "REST"] },
       { "title": "Languages", "list": ["TypeScript", "JavaScript"] },
       { "title": "Tools", "list": ["VSCode", "Figma", "Git", "Font Awesome"] }
@@ -23,12 +30,7 @@
   },
   "Contacts": {
     "title": "Message me here",
-    "intro": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
-    "email": "anna.tsyganova.dev@gmail.com",
-    "git": "https://github.com/Tsuna08",
-    "telegram": "https://t.me/tsuna_dev",
-    "telegramNick": "@tsuna_dev",
-    "linkedIn": "https://www.linkedin.com/in/anna-tsyganova/"
+    "intro": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
   },
   "Header": {
     "home": "home",
@@ -44,8 +46,7 @@
     "description": "Front-end developer"
   },
   "NotFound": {
-    "title": "404",
     "description": "Page not found",
-    "backHome": "Back to home ->"
+    "backHome": "Back to home"
   }
 }

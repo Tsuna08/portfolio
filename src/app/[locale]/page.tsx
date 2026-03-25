@@ -2,8 +2,11 @@ import Dots from "@/public/dots.svg";
 import Email from "@/public/email.svg";
 import OutlineLogo from "@/public/outline_logo.svg";
 import Telegram from "@/public/telegram.svg";
+import { media } from "@/src/constants/media";
+import { mainProjects } from "@/src/constants/projects";
 import { Link } from "@/src/i18n/navigation";
 import { Button, SkillBox, TitleSection } from "@/src/shared";
+import { Project } from "@/src/shared/Project";
 import { AboutMe } from "@/src/widget";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -21,6 +24,7 @@ export default async function Home({ params }: HomeProps) {
   const tHome = await getTranslations("Home");
   const tTitle = await getTranslations("Header");
   const tContacts = await getTranslations("Contacts");
+  const tProjects = await getTranslations("Projects");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
 
@@ -33,7 +37,7 @@ export default async function Home({ params }: HomeProps) {
             {tHome("title")} <span>{tHome("colorTitle")}</span>
           </h1>
           <p>{tHome("description")}</p>
-          <Button>{tHome("contactBtn")}</Button>
+          <Button>{tHome("contactBtn")}!!</Button>
         </div>
         <div className={classes.container}>
           <Image
@@ -51,6 +55,28 @@ export default async function Home({ params }: HomeProps) {
             height={150}
           />
           <Dots className={classes.dotsImg} alt="Dots picture" />
+        </div>
+      </section>
+
+      {/* Проекты */}
+      <section className={classes.sectionTitle}>
+        <TitleSection title={tTitle("projects")} />
+        <div className={classes.projectList}>
+          {mainProjects.map((item) => {
+            const project = tProjects.raw(item.id);
+
+            return (
+              <Project
+                key={item.id}
+                title={project.title}
+                technologies={item.technologies}
+                image={item.image}
+                description={project.description}
+                labelBtn={project.labelBtn}
+                link={item.link}
+              />
+            );
+          })}
         </div>
       </section>
 
@@ -85,15 +111,22 @@ export default async function Home({ params }: HomeProps) {
             <h6>{tContacts("title")}</h6>
 
             <Link
-              href={"mailto:" + tContacts("email")}
+              href={"mailto:" + media.email}
               className={classes.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Email alt="Email icon" />
-              {tContacts("email")}
+              {media.email}
             </Link>
-            <Link href={tContacts("telegram")} className={classes.link}>
+            <Link
+              href={media.telegram}
+              className={classes.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Telegram alt="Telegram icon" />
-              {tContacts("telegramNick")}
+              {media.telegramNick}
             </Link>
           </div>
         </div>

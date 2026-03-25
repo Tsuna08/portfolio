@@ -2,14 +2,14 @@ import Git from "@/public/git.svg";
 import LinkedIn from "@/public/linkedIn.svg";
 import Logo from "@/public/logo.svg";
 import Telegram from "@/public/telegram.svg";
+import { media } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
 import classes from "./Footer.module.scss";
 
 export const Footer = () => {
   const t = useTranslations("Footer");
-  const tContacts = useTranslations("Contacts");
-  const email = tContacts("email");
+  const email = media.email;
 
   return (
     <footer className={classes.footer}>
@@ -22,21 +22,29 @@ export const Footer = () => {
             alt="TsunaDev logo"
           />
           <h6 className={classes.label}>TsunaDev</h6>
-          <a className={classes.email} href={"mailto:" + { email }}>
-            {tContacts("email")}
+          <a className={classes.email} href={"mailto:" + email}>
+            {email}
           </a>
           <p className={classes.description}>{t("description")}</p>
         </div>
         <div className={classes.media}>
           <h5 className={classes.title}>{t("media")}</h5>
           <div className={classes.contacts}>
-            <Link href={tContacts("git")}>
+            <Link href={media.github} target="_blank" rel="noopener noreferrer">
               <Git className={classes.icon} alt="Git icon" />
             </Link>
-            <Link href={tContacts("telegram")}>
+            <Link
+              href={media.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Telegram className={classes.icon} alt="Telegram icon" />
             </Link>
-            <Link href={tContacts("linkedIn")}>
+            <Link
+              href={media.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <LinkedIn className={classes.icon} alt="LinkedIn icon" />
             </Link>
           </div>

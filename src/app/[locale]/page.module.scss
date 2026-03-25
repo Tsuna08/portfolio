@@ -47,6 +47,15 @@
   }
 }
 
+.projectList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
 .container {
   position: relative;
   display: inline-block;
