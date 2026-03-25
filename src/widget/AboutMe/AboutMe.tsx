@@ -1,4 +1,4 @@
-import { Button, TitleSection } from "@/src/components";
+import { Button, TitleSection } from "@/src/shared";
 import cn from "clsx";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
