@@ -1,9 +1,9 @@
+import Git from "@/public/git.svg";
+import LinkedIn from "@/public/linkedIn.svg";
+import Logo from "@/public/logo.svg";
+import Telegram from "@/public/telegram.svg";
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Git from "../../../public/git.svg";
-import LinkedIn from "../../../public/linkedIn.svg";
-import Logo from "../../../public/logo.svg";
-import Telegram from "../../../public/telegram.svg";
 import classes from "./Footer.module.scss";
 
 export const Footer = () => {

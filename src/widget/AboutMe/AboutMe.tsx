@@ -1,3 +1,5 @@
+import Dots from "@/public/dots.svg";
+import { Link } from "@/src/i18n/navigation";
 import { Button, TitleSection } from "@/src/shared";
 import cn from "clsx";
 import { useTranslations } from "next-intl";
@@ -34,8 +36,13 @@ export const AboutMe = ({
           {intro.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
-          {showReadMore && <Button>{tAbout("readMoreBtn")}</Button>}
+          {showReadMore && (
+            <Link href="/about">
+              <Button>{tAbout("readMoreBtn")}</Button>
+            </Link>
+          )}
         </div>
+
         <Image
           className={classes.photo}
           src="/photo.png"
@@ -44,8 +51,9 @@ export const AboutMe = ({
           height={500}
           priority
         />
-        <div className={cn(classes.dotsImg, classes.leftDots)} />
-        <div className={cn(classes.dotsImg, classes.rightDots)} />
+
+        <Dots className={cn(classes.dotsImg, classes.leftDots)} />
+        <Dots className={cn(classes.dotsImg, classes.rightDots)} />
       </div>
     </section>
   );

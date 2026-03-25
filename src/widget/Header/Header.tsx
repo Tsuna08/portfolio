@@ -3,10 +3,10 @@
 import cn from "clsx";
 import { useTranslations } from "next-intl";
 
+import Logo from "@/public/logo.svg";
 import { routes } from "@/src/constants/routes";
 import { Link, usePathname } from "@/src/i18n/navigation";
 import { LanguageSwitcher } from "@/src/shared";
-import Logo from "../../../public/logo.svg";
 import classes from "./Header.module.scss";
 
 export const Header = () => {

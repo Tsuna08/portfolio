@@ -35,11 +35,7 @@
 
 .dotsImg {
   position: absolute;
-  width: 84px;
-  height: 84px;
-  background-color: var(--secondary-color);
-  mask: url("/dots.svg") no-repeat center / contain;
-  -webkit-mask: url("/dots.svg") no-repeat center / contain;
+  color: var(--secondary-color);
   z-index: 10;
 }
 

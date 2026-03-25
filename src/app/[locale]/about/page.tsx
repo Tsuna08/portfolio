@@ -1,6 +1,5 @@
-import { Title } from "@/src/components";
-import { SkillBox } from "@/src/shared";
-import { AboutMe } from "@/src/widget/AboutMe";
+import { SkillBox, Title } from "@/src/shared";
+import { AboutMe } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
 

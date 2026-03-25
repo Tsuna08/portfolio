@@ -1,14 +1,14 @@
+import Dots from "@/public/dots.svg";
+import Email from "@/public/email.svg";
+import OutlineLogo from "@/public/outline_logo.svg";
+import Telegram from "@/public/telegram.svg";
 import { Link } from "@/src/i18n/navigation";
 import { Button, SkillBox, TitleSection } from "@/src/shared";
+import { AboutMe } from "@/src/widget";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import Dots from "../../../public/dots.svg";
-import Email from "../../../public/email.svg";
-import OutlineLogo from "../../../public/outline_logo.svg";
-import Telegram from "../../../public/telegram.svg";
 import classes from "./page.module.scss";
-import { AboutMe } from "@/src/widget";
 
 interface HomeProps {
   params: Promise<{ locale: string }>;

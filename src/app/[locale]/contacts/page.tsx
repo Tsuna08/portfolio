@@ -1,4 +1,4 @@
-import { TitleSection } from "@/src/components";
+import { TitleSection } from "@/src/shared";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
 
