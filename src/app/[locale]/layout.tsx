@@ -7,8 +7,7 @@ import { Fira_Code } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { Locale, locales } from "@/src/i18n/config";
-import { Header } from "@/src/widget";
-import { Footer } from "@/src/widget/Footer";
+import { Footer, Header, Media } from "@/src/widget";
 
 import classes from "./layout.module.scss";
 
@@ -48,6 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className={`${firaCode.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
+          <Media />
           <main className={classes.main}>{children}</main>
           <Footer />
         </NextIntlClientProvider>
