@@ -5,6 +5,10 @@ import { AboutMe } from "@/src/widget/AboutMe";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import Dots from "../../../public/dots.svg";
+import Email from "../../../public/email.svg";
+import OutlineLogo from "../../../public/outline_logo.svg";
+import Telegram from "../../../public/telegram.svg";
 import classes from "./page.module.scss";
 
 interface HomeProps {
@@ -41,15 +45,13 @@ export default async function Home({ params }: HomeProps) {
             height={500}
             priority
           />
-          <Image
+          <OutlineLogo
             className={classes.topTmg}
-            src="/outline_logo.svg"
             alt="Outline logo"
             width={150}
             height={150}
-            priority
           />
-          <div className={classes.dotsImg} />
+          <Dots className={classes.dotsImg} alt="Dots picture" />
         </div>
       </section>
 
@@ -58,30 +60,9 @@ export default async function Home({ params }: HomeProps) {
         <TitleSection title={tTitle("skills")} />
         <div className={classes.section}>
           <div className={cn(classes.section, classes.containerGrid)}>
-            <Image
-              className={classes.boxDots1}
-              src="/dots.svg"
-              alt="Dots picture"
-              width={63}
-              height={63}
-              priority
-            />
-            <Image
-              className={classes.boxDots2}
-              src="/dots.svg"
-              alt="Dots picture"
-              width={63}
-              height={63}
-              priority
-            />
-            <Image
-              className={classes.boxLogo}
-              src="/outline_logo.svg"
-              alt="Outline logo icon"
-              width={113}
-              height={113}
-              priority
-            />
+            <Dots className={classes.boxDots1} alt="Dots picture" />
+            <Dots className={classes.boxDots2} alt="Dots picture" />
+            <OutlineLogo className={classes.boxLogo} alt="Outline logo icon" />
             <div className={classes.box} />
             <div className={classes.smallBox} />
           </div>
@@ -108,23 +89,11 @@ export default async function Home({ params }: HomeProps) {
               href={"mailto:" + tContacts("email")}
               className={classes.link}
             >
-              <Image
-                src="/email.svg"
-                alt="Email icon"
-                width={32}
-                height={32}
-                priority
-              />
+              <Email alt="Email icon" />
               {tContacts("email")}
             </Link>
             <Link href={tContacts("telegram")} className={classes.link}>
-              <Image
-                src="/telegram.svg"
-                alt="Telegram icon"
-                width={32}
-                height={32}
-                priority
-              />
+              <Telegram alt="Telegram icon" />
               {tContacts("telegramNick")}
             </Link>
           </div>

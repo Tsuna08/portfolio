@@ -2,11 +2,11 @@
 
 import cn from "clsx";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 import { LanguageSwitcher } from "@/src/components";
 import { routes } from "@/src/constants/routes";
 import { Link, usePathname } from "@/src/i18n/navigation";
+import Logo from "../../../public/logo.svg";
 import classes from "./Header.module.scss";
 
 export const Header = () => {
@@ -23,14 +23,7 @@ export const Header = () => {
   return (
     <header className={classes.header}>
       <Link href="/" className={classes.logo}>
-        <Image
-          className="dark"
-          src="/logo.svg"
-          alt="TsunaDev logo"
-          width={16}
-          height={16}
-          priority
-        />
+        <Logo alt="TsunaDev logo" width={16} height={16} />
         <h3 className={classes.label}> TsunaDev</h3>
       </Link>
       <div className={classes.controlUnit}>

@@ -1,8 +1,9 @@
-"use client";
-
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Git from "../../../public/git.svg";
+import LinkedIn from "../../../public/linkedIn.svg";
+import Logo from "../../../public/logo.svg";
+import Telegram from "../../../public/telegram.svg";
 import classes from "./Footer.module.scss";
 
 export const Footer = () => {
@@ -13,59 +14,30 @@ export const Footer = () => {
   return (
     <footer className={classes.footer}>
       <div className={classes.content}>
-        <div className={classes.section}>
-          <div className={classes.info}>
-            <div className={classes.contacts}>
-              <h6 className={classes.label}>
-                <Image
-                  className="dark"
-                  src="/logo.svg"
-                  alt="TsunaDev logo"
-                  width={16}
-                  height={16}
-                  priority
-                />
-                TsunaDev
-              </h6>
-              <a className={classes.link} href={"mailto:" + { email }}>
-                {tContacts("email")}
-              </a>
-            </div>
-            <p>{t("description")}</p>
-          </div>
-        </div>
         <div className={classes.info}>
-          <h5 className={classes.media}>{t("media")}</h5>
+          <Logo
+            className={classes.footerIcon}
+            height={16}
+            width={16}
+            alt="TsunaDev logo"
+          />
+          <h6 className={classes.label}>TsunaDev</h6>
+          <a className={classes.email} href={"mailto:" + { email }}>
+            {tContacts("email")}
+          </a>
+          <p className={classes.description}>{t("description")}</p>
+        </div>
+        <div className={classes.media}>
+          <h5 className={classes.title}>{t("media")}</h5>
           <div className={classes.contacts}>
             <Link href={tContacts("git")}>
-              <Image
-                className="dark"
-                src="/git.svg"
-                alt="Git icon"
-                width={32}
-                height={32}
-                priority
-              />
+              <Git className={classes.icon} alt="Git icon" />
             </Link>
             <Link href={tContacts("telegram")}>
-              <Image
-                className="dark"
-                src="/telegram.svg"
-                alt="Telegram icon"
-                width={32}
-                height={32}
-                priority
-              />
+              <Telegram className={classes.icon} alt="Telegram icon" />
             </Link>
             <Link href={tContacts("linkedIn")}>
-              <Image
-                className="dark"
-                src="/linkedIn.svg"
-                alt="LinkedIn icon"
-                width={32}
-                height={32}
-                priority
-              />
+              <LinkedIn className={classes.icon} alt="LinkedIn icon" />
             </Link>
           </div>
         </div>

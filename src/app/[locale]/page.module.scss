@@ -63,18 +63,16 @@
   top: 35%;
   right: -8%;
   z-index: 1;
+  color: var(--primary-color);
 }
 
 .dotsImg {
   position: absolute;
-  bottom: 5%;
-  left: -23%;
-  width: 150px;
-  height: 150px;
-  background-color: var(--primary-color);
-  mask: url("/dots.svg") no-repeat center / contain;
-  -webkit-mask: url("/dots.svg") no-repeat center / contain;
+  bottom: 10%;
+  left: -20%;
   z-index: 3;
+  transform: scale(1.75);
+  color: var(--primary-color);
 }
 
 .containerGrid {
@@ -98,16 +96,25 @@
   }
 }
 
+.boxDots1,
+.boxDots2 {
+  transform: scale(0.75);
+  color: var(--secondary-color);
+}
+
 .boxDots1 {
   grid-area: dots1;
 }
 
 .boxDots2 {
   grid-area: dots2;
+  transform: scale(0.75) translate(1.2rem, 0.4rem);
 }
 
 .boxLogo {
   grid-area: logo;
+  color: var(--primary-color);
+  transform: scale(1.346) translate(1.8rem, 1rem);
 }
 
 .box {
