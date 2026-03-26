@@ -15,16 +15,13 @@ export const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.content}>
         <div className={classes.info}>
-          <Logo
-            className={classes.footerIcon}
-            height={16}
-            width={16}
-            alt="TsunaDev logo"
-          />
-          <h6 className={classes.label}>TsunaDev</h6>
-          {/* <a className={classes.email} href={"mailto:" + email}>
+          <div className={classes.label}>
+            <Logo height={16} width={16} alt="TsunaDev logo" />
+            <h6>TsunaDev</h6>
+          </div>
+          <a className={classes.email} href={"mailto:" + email}>
             {email}
-          </a> */}
+          </a>
           <p className={classes.description}>{t("description")}</p>
         </div>
         <div className={classes.media}>

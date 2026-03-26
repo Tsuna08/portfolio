@@ -23,18 +23,25 @@
 .info {
   display: grid;
   grid-template-areas:
-    "logo title email email"
-    "description description description description";
+    "title email email"
+    "description description description";
   row-gap: 1.5rem;
   column-gap: 0.5rem;
   align-items: center;
-}
-
-.footerIcon {
-  grid-area: logo;
+  @include tablet {
+    column-gap: unset;
+  }
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   grid-area: title;
   font-weight: 500;
 }
@@ -45,12 +52,16 @@
 
 .description {
   grid-area: description;
+  grid-column: span 2;
 }
 
 .media {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  @include mobile {
+    align-items: center;
+  }
 }
 
 .title {
