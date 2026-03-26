@@ -12,6 +12,7 @@ export default async function About({ params }: AboutProps) {
   setRequestLocale(locale);
 
   const tHeader = await getTranslations("Header");
+  const tAbout = await getTranslations("AboutSection");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
 
@@ -19,7 +20,7 @@ export default async function About({ params }: AboutProps) {
     <>
       <AboutMe
         preTitle="/"
-        subTitle={tHeader("subTitle")}
+        subTitle={tAbout("subTitle")}
         showLine={false}
         showReadMore={false}
       />

@@ -15,7 +15,7 @@ export const Header = () => {
 
   const links = [
     { name: t("home"), url: routes.root },
-    // { name: t("projects"), url: routes.projects },
+    { name: t("projects"), url: routes.projects },
     { name: t("about-me"), url: routes.about },
     { name: t("contacts"), url: routes.contacts },
   ];

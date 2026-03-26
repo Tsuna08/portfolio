@@ -10,11 +10,15 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const tHeader = await getTranslations("Header");
+  const tContacts = await getTranslations("Contacts");
 
   return (
     <div className={classes.container}>
-      <Contacts preTitle="/" subTitle={tHeader("subTitle")} showLine={false} />
+      <Contacts
+        preTitle="/"
+        subTitle={tContacts("subTitle")}
+        showLine={false}
+      />
     </div>
   );
 }
