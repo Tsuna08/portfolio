@@ -1,6 +1,6 @@
 import Dots from "@/public/dots.svg";
 import { Link } from "@/src/i18n/navigation";
-import { Button, TitleSection } from "@/src/shared";
+import { Button, Section } from "@/src/shared";
 import cn from "clsx";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -21,28 +21,26 @@ export const AboutMe = ({
 }: AboutMeProps) => {
   const tTitle = useTranslations("Header");
   const tAbout = useTranslations("AboutSection");
-  const intro: string[] = tAbout.raw("intro");
+  const info: string[] = tAbout.raw("info");
 
   return (
-    <section className={classes.section}>
-      <TitleSection
-        title={tTitle("about-me")}
-        preTitle={preTitle}
-        subTitle={subTitle}
-        showLine={showLine}
-      />
+    <Section
+      title={tTitle("about-me")}
+      preTitle={preTitle}
+      subTitle={subTitle}
+      showLine={showLine}
+    >
+      <div className={classes.info}>
+        {info.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
+        {showReadMore && (
+          <Link href="/about">
+            <Button>{tAbout("readMoreBtn") + " ->"}</Button>
+          </Link>
+        )}
+      </div>
       <div className={classes.container}>
-        <div className={classes.info}>
-          {intro.map((item, index) => (
-            <p key={index}>{item}</p>
-          ))}
-          {showReadMore && (
-            <Link href="/about">
-              <Button>{tAbout("readMoreBtn") + " ->"}</Button>
-            </Link>
-          )}
-        </div>
-
         <Image
           className={classes.photo}
           src="/photo.png"
@@ -51,10 +49,9 @@ export const AboutMe = ({
           height={500}
           priority
         />
-
         <Dots className={cn(classes.dotsImg, classes.leftDots)} />
         <Dots className={cn(classes.dotsImg, classes.rightDots)} />
       </div>
-    </section>
+    </Section>
   );
 };

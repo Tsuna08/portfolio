@@ -1,13 +1,11 @@
 import Dots from "@/public/dots.svg";
-import Email from "@/public/email.svg";
 import OutlineLogo from "@/public/outline_logo.svg";
-import Telegram from "@/public/telegram.svg";
 import { media } from "@/src/constants/media";
 import { mainProjects } from "@/src/constants/projects";
 import { Link } from "@/src/i18n/navigation";
-import { Button, SkillBox, TitleSection } from "@/src/shared";
-import { Project } from "@/src/shared/Project";
+import { Button, Project, Section, SkillBox } from "@/src/shared";
 import { AboutMe } from "@/src/widget";
+import { Contacts } from "@/src/widget/Contacts/Contacts";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -23,7 +21,6 @@ export default async function Home({ params }: HomeProps) {
 
   const tHome = await getTranslations("Home");
   const tTitle = await getTranslations("Header");
-  const tContacts = await getTranslations("Contacts");
   const tProjects = await getTranslations("Projects");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
@@ -32,12 +29,15 @@ export default async function Home({ params }: HomeProps) {
     <>
       {/* Приветствие */}
       <section className={classes.mainSection}>
+        {/* <Section> */}
         <div className={classes.info}>
           <h1>
             {tHome("title")} <span>{tHome("colorTitle")}</span>
           </h1>
           <p>{tHome("description")}</p>
-          <Button>{tHome("contactBtn")}!!</Button>
+          <Link href={media.vk} target="_blank" rel="noopener noreferrer">
+            <Button>{tHome("contactBtn")}!!</Button>
+          </Link>
         </div>
         <div className={classes.container}>
           <Image
@@ -57,17 +57,16 @@ export default async function Home({ params }: HomeProps) {
           <Dots className={classes.dotsImg} alt="Dots picture" />
         </div>
       </section>
+      {/* </Section> */}
 
       {/* Проекты */}
-      <section className={classes.sectionTitle}>
-        <TitleSection title={tTitle("projects")} />
+      <Section title={tTitle("projects")}>
         <div className={classes.projectList}>
-          {mainProjects.map((item) => {
+          {mainProjects.map((item, index) => {
             const project = tProjects.raw(item.id);
-
             return (
               <Project
-                key={item.id}
+                key={index}
                 title={project.title}
                 technologies={item.technologies}
                 image={item.image}
@@ -78,59 +77,29 @@ export default async function Home({ params }: HomeProps) {
             );
           })}
         </div>
-      </section>
+      </Section>
 
       {/* Навыки */}
-      <section className={classes.sectionTitle}>
-        <TitleSection title={tTitle("skills")} />
-        <div className={classes.section}>
-          <div className={cn(classes.section, classes.containerGrid)}>
-            <Dots className={classes.boxDots1} alt="Dots picture" />
-            <Dots className={classes.boxDots2} alt="Dots picture" />
-            <OutlineLogo className={classes.boxLogo} alt="Outline logo icon" />
-            <div className={classes.box} />
-            <div className={classes.smallBox} />
-          </div>
-          <div className={cn(classes.skillsSection)}>
-            {skills.map((item, index) => (
-              <SkillBox key={index} title={item.title} list={item.list} />
-            ))}
-          </div>
+      <Section title={tTitle("skills")}>
+        <div className={classes.containerGrid}>
+          <Dots className={classes.boxDots1} alt="Dots picture" />
+          <Dots className={classes.boxDots2} alt="Dots picture" />
+          <OutlineLogo className={classes.boxLogo} alt="Outline logo icon" />
+          <div className={classes.box} />
+          <div className={classes.smallBox} />
         </div>
-      </section>
+        <div className={cn(classes.skills)}>
+          {skills.map((item, index) => (
+            <SkillBox key={index} title={item.title} list={item.list} />
+          ))}
+        </div>
+      </Section>
 
       {/* Секция – обо мне */}
       <AboutMe />
 
       {/* Контакты */}
-      <section className={classes.sectionTitle}>
-        <TitleSection title={tTitle("contacts")} />
-        <div className={classes.section}>
-          <p className={classes.textSection}>{tContacts("intro")}</p>
-          <div className={classes.contacts}>
-            <h6>{tContacts("title")}</h6>
-
-            <Link
-              href={"mailto:" + media.email}
-              className={classes.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Email alt="Email icon" />
-              {media.email}
-            </Link>
-            <Link
-              href={media.telegram}
-              className={classes.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Telegram alt="Telegram icon" />
-              {media.telegramNick}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Contacts />
     </>
   );
 }

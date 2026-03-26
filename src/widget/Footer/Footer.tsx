@@ -22,9 +22,9 @@ export const Footer = () => {
             alt="TsunaDev logo"
           />
           <h6 className={classes.label}>TsunaDev</h6>
-          <a className={classes.email} href={"mailto:" + email}>
+          {/* <a className={classes.email} href={"mailto:" + email}>
             {email}
-          </a>
+          </a> */}
           <p className={classes.description}>{t("description")}</p>
         </div>
         <div className={classes.media}>
@@ -40,11 +40,7 @@ export const Footer = () => {
             >
               <Telegram className={classes.icon} alt="Telegram icon" />
             </Link>
-            <Link
-              href={media.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={media.vk} target="_blank" rel="noopener noreferrer">
               <LinkedIn className={classes.icon} alt="LinkedIn icon" />
             </Link>
           </div>

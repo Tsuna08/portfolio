@@ -16,7 +16,7 @@ export default async function About({ params }: AboutProps) {
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
 
   return (
-    <div className={classes.container}>
+    <>
       <AboutMe
         preTitle="/"
         subTitle={tHeader("subTitle")}
@@ -33,6 +33,6 @@ export default async function About({ params }: AboutProps) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

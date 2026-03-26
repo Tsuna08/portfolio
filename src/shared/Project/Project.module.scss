@@ -1,10 +1,17 @@
+@use "@/src/app/mixins" as *;
+
 .box {
   border: 1px solid var(--secondary-color);
-  width: 330px;
+  width: calc(100% / 3.1);
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .photo {
   border-bottom: 1px solid var(--secondary-color);
+  width: 100%;
 }
 
 .skills {

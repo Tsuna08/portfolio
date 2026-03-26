@@ -1,12 +1,12 @@
-import { TitleSection } from "@/src/shared";
+import { Contacts } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
 
-interface AboutProps {
+interface ContactsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-export default async function Contacts({ params }: AboutProps) {
+export default async function ContactsPage({ params }: ContactsPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -14,13 +14,7 @@ export default async function Contacts({ params }: AboutProps) {
 
   return (
     <div className={classes.container}>
-      <TitleSection
-        title={tHeader("contacts")}
-        preTitle="/"
-        subTitle={tHeader("subTitle")}
-        showLine={false}
-      />
-      <div className={classes.box}></div>
+      <Contacts preTitle="/" subTitle={tHeader("subTitle")} showLine={false} />
     </div>
   );
 }

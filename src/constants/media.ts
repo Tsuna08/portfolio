@@ -4,4 +4,5 @@ export const media = {
   telegram: "https://t.me/tsuna_dev",
   telegramNick: "@tsuna_dev",
   linkedIn: "https://www.linkedin.com/in/anna-tsyganova/",
+  vk: "https://vk.com/tsuna_28",
 };
