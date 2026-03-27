@@ -1,7 +1,12 @@
+@use "@/src/app/mixins" as *;
+
 .box {
   border: 1px solid var(--secondary-color);
   min-width: 173px;
   max-width: 196px;
+  @include tablet {
+    max-width: unset;
+  }
 }
 
 .title {

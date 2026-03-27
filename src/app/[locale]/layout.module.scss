@@ -1,8 +1,16 @@
+@use "@/src/app/mixins" as *;
+
 .main {
   width: 100%;
-  padding: 0 8%;
   position: relative;
   display: flex;
   flex-direction: column;
   background: var(--background-main);
+  padding: 0 8%;
+  @include xxl {
+    padding: 0 10%;
+  }
+  @include xxxl {
+    padding: 0 12%;
+  }
 }

@@ -1,5 +1,5 @@
-import en from "@/src/language/en.json";
-import ru from "@/src/language/ru.json";
+import en from "./language/en.json";
+import ru from "./language/ru.json";
 
 import { Locale } from "./config";
 

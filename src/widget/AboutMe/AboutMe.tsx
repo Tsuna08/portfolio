@@ -43,7 +43,7 @@ export const AboutMe = ({
       <div className={classes.container}>
         <Image
           className={classes.photo}
-          src="/photo.png"
+          src="/about-me.png"
           alt="About me photo"
           width={343}
           height={500}

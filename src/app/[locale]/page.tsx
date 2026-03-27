@@ -44,16 +44,11 @@ export default async function Home({ params }: HomeProps) {
             className={classes.bottomImg}
             src="/photo.png"
             alt="My photo"
-            width={357}
+            width={500}
             height={500}
             priority
           />
-          <OutlineLogo
-            className={classes.topTmg}
-            alt="Outline logo"
-            width={150}
-            height={150}
-          />
+          <OutlineLogo className={classes.logoTmg} alt="Outline logo" />
           <Dots className={classes.dotsImg} alt="Dots picture" />
         </div>
       </section>

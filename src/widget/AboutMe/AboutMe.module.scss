@@ -8,6 +8,12 @@
   justify-content: center;
   gap: 1rem;
   max-width: 515px;
+  @include xxxl {
+    max-width: 50vw;
+  }
+  @include tablet {
+    max-width: unset;
+  }
 }
 
 .container {
@@ -36,8 +42,8 @@
 }
 
 .leftDots {
-  bottom: 15%;
-  left: -10%;
+  top: 75%;
+  left: 5%;
   @include tablet {
     left: 10%;
   }

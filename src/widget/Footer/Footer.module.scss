@@ -8,6 +8,12 @@
   width: 100%;
   padding: 2rem 8%;
   background: var(--background);
+  @include xxl {
+    padding: 2rem 10%;
+  }
+  @include xxxl {
+    padding: 2rem 12%;
+  }
 }
 
 .content {

@@ -10,7 +10,6 @@
   gap: 2rem;
   @include tablet {
     flex-direction: column;
-    margin: 10% 0;
     gap: 1rem;
   }
 }
@@ -21,15 +20,23 @@
   align-items: flex-start;
   gap: 1rem;
   max-width: 537px;
-
+  @include xxl {
+    max-width: unset;
+  }
+  @include tablet {
+    max-width: unset;
+  }
   h1 {
     font-size: 32px;
     font-weight: 600;
   }
 
-  span,
-  p {
+  span {
     color: var(--primary-color);
+  }
+
+  p {
+    color: var(--secondary-color);
   }
   @include sm {
     p {
@@ -54,53 +61,67 @@
   position: relative;
   z-index: 2;
   height: fit-content;
-  @include lg {
-    width: 357px;
-  }
-  @include tablet {
-    width: 300px;
+  @include xxl {
+    width: 25vw;
   }
 }
 
-.topTmg {
+.logoTmg {
   position: absolute;
-  bottom: 35%;
-  right: -8%;
+  top: 33%;
+  left: 1%;
   z-index: 1;
   color: var(--primary-color);
+  width: 150px;
+  height: 150px;
+  @mixin xxxl {
+    transform: scale(1);
+    left: 10%;
+    top: 31%;
+  }
+  @include xxl {
+    transform: scale(0.95);
+    left: -3%;
+    top: 31%;
+  }
+  @include xl {
+    transform: scale(0.85);
+    left: -3%;
+    top: 31%;
+  }
   @include lg {
-    width: 130px;
-    height: 130px;
-    right: -8%;
+    transform: scale(0.75);
+    left: -7%;
+    top: 30%;
   }
   @include tablet {
-    width: 110px;
-    right: -4%;
+    transform: scale(0.95);
+    left: -1%;
   }
   @include mobile {
-    width: 100px;
-    right: 5%;
+    transform: scale(0.85);
+    left: -5%;
   }
 }
 
 .dotsImg {
   position: absolute;
   bottom: 10%;
-  left: -15%;
+  right: 10%;
   z-index: 3;
-  transform: scale(1.75);
+  transform: scale(1.55);
   color: var(--primary-color);
   @include lg {
-    transform: scale(1.35);
-    left: -14%;
+    transform: scale(1.3);
+    right: 8%;
   }
   @include tablet {
-    transform: scale(1.3);
-    left: -13%;
+    transform: scale(1.25);
+    right: 5%;
   }
   @include mobile {
     transform: scale(1.2);
-    left: 0;
+    right: 0;
   }
 }
 
@@ -144,7 +165,7 @@
     height: unset;
   }
   @include tablet {
-    display: none;
+    transform: scale(0.5) translateX(-50%) translateY(-35%);
   }
 }
 
@@ -195,9 +216,11 @@
   gap: 1rem;
   max-width: 600px;
   height: fit-content;
+  @include xxxl {
+    max-width: unset;
+  }
   @include tablet {
-    flex-direction: column;
     max-width: 100%;
-    align-items: center;
+    justify-content: flex-start;
   }
 }
