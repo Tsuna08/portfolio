@@ -11,6 +11,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  @include mobile {
+    padding: 0.5rem 5%;
+  }
   @include xxl {
     padding: 0.5rem 10%;
   }

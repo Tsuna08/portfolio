@@ -1,5 +1,5 @@
 export const media = {
-  email: "anna.tsyganova.dev@gmail.com",
+  email: "info@tsuna-dev.com",
   github: "https://github.com/Tsuna08",
   telegram: "https://t.me/tsuna_dev",
   telegramNick: "@tsuna_dev",

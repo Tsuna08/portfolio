@@ -4,8 +4,7 @@ import { media } from "@/src/constants/media";
 import { mainProjects } from "@/src/constants/projects";
 import { Link } from "@/src/i18n/navigation";
 import { Button, Project, Section, SkillBox } from "@/src/shared";
-import { AboutMe } from "@/src/widget";
-import { Contacts } from "@/src/widget/Contacts/Contacts";
+import { AboutMe, Contacts } from "@/src/widget";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -29,7 +28,6 @@ export default async function Home({ params }: HomeProps) {
     <>
       {/* Приветствие */}
       <section className={classes.mainSection}>
-        {/* <Section> */}
         <div className={classes.info}>
           <h1>
             {tHome("title")} <span>{tHome("colorTitle")}</span>
@@ -52,10 +50,16 @@ export default async function Home({ params }: HomeProps) {
           <Dots className={classes.dotsImg} alt="Dots picture" />
         </div>
       </section>
-      {/* </Section> */}
 
       {/* Проекты */}
-      <Section title={tTitle("projects")}>
+      <Section
+        title={tTitle("projects")}
+        buttonsInTitle={
+          <Link href="/projects" className={classes.arrowLink}>
+            {tProjects("viewAll") + " ->"}
+          </Link>
+        }
+      >
         <div className={classes.projectList}>
           {mainProjects.map((item, index) => {
             const project = tProjects.raw(item.id);

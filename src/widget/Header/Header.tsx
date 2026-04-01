@@ -8,6 +8,7 @@ import { routes } from "@/src/constants/routes";
 import { Link, usePathname } from "@/src/i18n/navigation";
 import { LanguageSwitcher } from "@/src/shared";
 import classes from "./Header.module.scss";
+import { BurgerMenu } from "@/src/features";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -43,6 +44,7 @@ export const Header = () => {
         </nav>
         <LanguageSwitcher />
       </div>
+      <BurgerMenu links={links} />
     </header>
   );
 };

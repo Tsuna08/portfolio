@@ -35,9 +35,6 @@
   column-gap: 0.5rem;
   align-items: center;
   @include tablet {
-    column-gap: unset;
-  }
-  @include mobile {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -65,7 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  @include mobile {
+  @include tablet {
     align-items: center;
   }
 }
@@ -95,4 +92,5 @@
 
 .copyright {
   color: var(--secondary-color);
+  text-align: center;
 }

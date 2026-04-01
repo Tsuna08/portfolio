@@ -1,6 +1,6 @@
 {
   "Home": {
-    "title": "TsunaDev is a",
+    "title": "Tsyganova Anna is a",
     "colorTitle": "front-end developer",
     "description": "I craft responsive websites where technologies meet creativity",
     "contactBtn": "Contact me"
@@ -8,15 +8,17 @@
   "AboutSection": {
     "subTitle": "Who I am?",
     "info": [
-      "Hello, i’m TsunaDev. My name is Tsyganova Anna!",
+      "Hello, i’m Tsyganova Anna!",
       "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
-    "readMoreBtn": "Read more"
+    "readMoreBtn": "Read more",
+    "my-fun-facts": "my-fun-facts"
   },
   "Projects": {
     "subTitle": "List of my projects",
     "complete-apps": "complete-apps",
+    "viewAll": "View all",
     "portfolio": {
       "title": "Portfolio",
       "description": "You're using it right now",
@@ -43,6 +45,7 @@
     "contacts": "contacts",
     "skills": "skills"
   },
+  "BurgerMenu": { "closeMenu": "Close menu", "openMenu": "Open menu" },
   "Footer": {
     "media": "Media",
     "madeBy": "Made by TsunaDev",

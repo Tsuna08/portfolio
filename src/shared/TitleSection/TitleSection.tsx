@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Title } from "../Title/Title";
 import classes from "./TitleSection.module.scss";
 
@@ -6,6 +7,7 @@ interface TitleSectionProps {
   preTitle?: string;
   showLine?: boolean;
   subTitle?: string;
+  buttons?: ReactNode;
 }
 
 export const TitleSection = ({
@@ -13,12 +15,16 @@ export const TitleSection = ({
   preTitle = "#",
   showLine = true,
   subTitle,
+  buttons,
 }: TitleSectionProps) => {
   return (
     <div className={classes.section}>
-      <div className={classes.title}>
-        <Title title={title} preTitle={preTitle} />
-        {showLine && <div className={classes.line} />}
+      <div className={classes.titleAndButton}>
+        <div className={classes.title}>
+          <Title title={title} preTitle={preTitle} />
+          {showLine && <div className={classes.line} />}
+        </div>
+        {buttons && <>{buttons}</>}
       </div>
       {subTitle && <p>{subTitle}</p>}
     </div>

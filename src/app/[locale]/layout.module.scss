@@ -7,6 +7,9 @@
   flex-direction: column;
   background: var(--background-main);
   padding: 0 8%;
+  @include mobile {
+    padding: 0 5%;
+  }
   @include xxl {
     padding: 0 10%;
   }
