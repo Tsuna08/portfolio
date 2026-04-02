@@ -13,7 +13,8 @@
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
     "readMoreBtn": "Read more",
-    "my-fun-facts": "my-fun-facts"
+    "my-fun-facts": "my-fun-facts",
+    "facts": [{ "id": "fact-1", "text": "..." }]
   },
   "Projects": {
     "subTitle": "List of my projects",
@@ -23,6 +24,11 @@
       "title": "Portfolio",
       "description": "You're using it right now",
       "labelBtn": "GitHub"
+    },
+    "txtOnImg": {
+      "title": "TxtOnImg",
+      "description": "An extension for adding text to images online",
+      "labelBtn": "Live"
     }
   },
   "Skills": {

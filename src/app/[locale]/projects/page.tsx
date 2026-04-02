@@ -24,11 +24,11 @@ export default async function Projects({ params }: ProjectsProps) {
       <div className={classes.container}>
         <Title title={tProjects("complete-apps")} />
         <div className={classes.list}>
-          {completeApps.map((item, index) => {
+          {completeApps.map((item) => {
             const project = tProjects.raw(item.id);
             return (
               <Project
-                key={index}
+                key={item.id}
                 title={project.title}
                 technologies={item.technologies}
                 image={item.image}

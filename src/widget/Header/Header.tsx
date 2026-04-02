@@ -5,10 +5,10 @@ import { useTranslations } from "next-intl";
 
 import Logo from "@/public/logo.svg";
 import { routes } from "@/src/constants/routes";
+import { BurgerMenu } from "@/src/features";
 import { Link, usePathname } from "@/src/i18n/navigation";
 import { LanguageSwitcher } from "@/src/shared";
 import classes from "./Header.module.scss";
-import { BurgerMenu } from "@/src/features";
 
 export const Header = () => {
   const pathname = usePathname();

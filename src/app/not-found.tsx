@@ -1,8 +1,7 @@
-import { useTranslations } from "next-intl";
+import cn from "clsx";
+import { getTranslations } from "next-intl/server";
 import { Fira_Code } from "next/font/google";
 import Link from "next/link";
-
-import cn from "clsx";
 import { Button } from "../shared";
 import "./globals.css";
 import classes from "./not-found.module.scss";
@@ -12,8 +11,8 @@ const firaCode = Fira_Code({
   subsets: ["latin"],
 });
 
-export default function NotFound() {
-  const t = useTranslations("NotFound");
+export default async function NotFound() {
+  const t = await getTranslations("NotFound");
 
   return (
     <div className={cn(firaCode.variable, classes.page, "antialiased")}>

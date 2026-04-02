@@ -4,11 +4,11 @@ import Logo from "@/public/logo.svg";
 import Telegram from "@/public/telegram.svg";
 import { media } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import classes from "./Footer.module.scss";
 
-export const Footer = () => {
-  const t = useTranslations("Footer");
+export const Footer = async () => {
+  const t = await getTranslations("Footer");
   const email = media.email;
 
   return (

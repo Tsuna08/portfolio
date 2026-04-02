@@ -27,16 +27,16 @@ export const Project = ({
       {image && (
         <Image
           className={classes.photo}
-          src="/portfolio.png"
-          alt="Portfolio"
+          src={image}
+          alt={title ?? "Project image"}
           width={330}
           height={200}
           priority
         />
       )}
       <div className={classes.skills}>
-        {technologies?.map((item, index) => (
-          <p key={index}>{item}</p>
+        {technologies?.map((item) => (
+          <p key={item}>{item}</p>
         ))}
       </div>
       <div className={classes.content}>

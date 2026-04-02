@@ -61,11 +61,11 @@ export default async function Home({ params }: HomeProps) {
         }
       >
         <div className={classes.projectList}>
-          {mainProjects.map((item, index) => {
+          {mainProjects.map((item) => {
             const project = tProjects.raw(item.id);
             return (
               <Project
-                key={index}
+                key={item.id}
                 title={project.title}
                 technologies={item.technologies}
                 image={item.image}
@@ -88,8 +88,8 @@ export default async function Home({ params }: HomeProps) {
           <div className={classes.smallBox} />
         </div>
         <div className={cn(classes.skills)}>
-          {skills.map((item, index) => (
-            <SkillBox key={index} title={item.title} list={item.list} />
+          {skills.map((item) => (
+            <SkillBox key={item.title} title={item.title} list={item.list} />
           ))}
         </div>
       </Section>

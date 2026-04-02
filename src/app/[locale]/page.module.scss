@@ -131,9 +131,9 @@
 
 .projectList {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  gap: 1rem;
   & > :nth-child(n) {
     width: calc(100% / 3.1);
   }

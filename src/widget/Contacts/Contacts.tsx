@@ -3,7 +3,7 @@ import Telegram from "@/public/telegram.svg";
 import { media } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
 import { Section } from "@/src/shared";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import classes from "./Contacts.module.scss";
 
 interface ContactsProps {
@@ -12,13 +12,13 @@ interface ContactsProps {
   subTitle?: string;
 }
 
-export const Contacts = ({
+export const Contacts = async ({
   preTitle,
   subTitle,
   showLine = true,
 }: ContactsProps) => {
-  const tTitle = useTranslations("Header");
-  const tContacts = useTranslations("Contacts");
+  const tTitle = await getTranslations("Header");
+  const tContacts = await getTranslations("Contacts");
   const info: string[] = tContacts.raw("info");
 
   return (

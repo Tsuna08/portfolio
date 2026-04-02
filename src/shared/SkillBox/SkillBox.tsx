@@ -10,8 +10,8 @@ export const SkillBox = ({ title, list }: SkillBoxProps) => {
     <div className={classes.box}>
       <p className={classes.title}>{title}</p>
       <div className={classes.content}>
-        {list.map((item, index) => (
-          <p className={classes.skill} key={index}>
+        {list.map((item) => (
+          <p className={classes.skill} key={item}>
             {item}
           </p>
         ))}

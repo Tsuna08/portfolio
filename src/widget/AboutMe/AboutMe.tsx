@@ -2,7 +2,7 @@ import Dots from "@/public/dots.svg";
 import { Link } from "@/src/i18n/navigation";
 import { Button, Section } from "@/src/shared";
 import cn from "clsx";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import classes from "./AboutMe.module.scss";
 
@@ -13,14 +13,14 @@ interface AboutMeProps {
   showReadMore?: boolean;
 }
 
-export const AboutMe = ({
+export const AboutMe = async ({
   preTitle,
   subTitle,
   showLine = true,
   showReadMore = true,
 }: AboutMeProps) => {
-  const tTitle = useTranslations("Header");
-  const tAbout = useTranslations("AboutSection");
+  const tTitle = await getTranslations("Header");
+  const tAbout = await getTranslations("AboutSection");
   const info: string[] = tAbout.raw("info");
 
   return (
@@ -31,8 +31,8 @@ export const AboutMe = ({
       showLine={showLine}
     >
       <div className={classes.info}>
-        {info.map((item, index) => (
-          <p key={index}>{item}</p>
+        {info.map((item) => (
+          <p key={item}>{item}</p>
         ))}
         {showReadMore && (
           <Link href="/about">
