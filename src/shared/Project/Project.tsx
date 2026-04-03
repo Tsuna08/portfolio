@@ -31,7 +31,7 @@ export const Project = ({
           alt={title ?? "Project image"}
           width={330}
           height={200}
-          priority
+          loading="lazy"
         />
       )}
       <div className={classes.skills}>

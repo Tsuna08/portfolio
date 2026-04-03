@@ -44,7 +44,7 @@ export default async function Home({ params }: HomeProps) {
             alt="My photo"
             width={500}
             height={500}
-            priority
+            loading="lazy"
           />
           <OutlineLogo className={classes.logoTmg} alt="Outline logo" />
           <Dots className={classes.dotsImg} alt="Dots picture" />

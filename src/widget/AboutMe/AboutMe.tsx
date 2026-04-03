@@ -47,7 +47,7 @@ export const AboutMe = async ({
           alt="About me photo"
           width={343}
           height={500}
-          priority
+          loading="lazy"
         />
         <Dots className={cn(classes.dotsImg, classes.leftDots)} />
         <Dots className={cn(classes.dotsImg, classes.rightDots)} />
