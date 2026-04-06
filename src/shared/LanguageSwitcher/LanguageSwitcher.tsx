@@ -16,6 +16,7 @@ export const LanguageSwitcher = () => {
 
   return (
     <select
+      id="language switcher"
       value={locale}
       onChange={(e) => handleChange(e.target.value)}
       className={classes.select}
