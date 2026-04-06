@@ -1,8 +1,5 @@
-import Git from "@/public/git.svg";
-import LinkedIn from "@/public/linkedIn.svg";
-import Logo from "@/public/logo.svg";
-import Telegram from "@/public/telegram.svg";
-import { media } from "@/src/constants/media";
+import Logo from "@/public/icons/logo.svg";
+import { footerLinks, media } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import classes from "./Footer.module.scss";
@@ -19,27 +16,30 @@ export const Footer = async () => {
             <Logo height={16} width={16} alt="TsunaDev logo" />
             <h6>TsunaDev</h6>
           </div>
-          <a className={classes.email} href={"mailto:" + email}>
-            {email}
+          <a className={classes.email} href={"mailto:" + email.url}>
+            {email.title}
           </a>
           <p className={classes.description}>{t("description")}</p>
         </div>
         <div className={classes.media}>
           <h5 className={classes.title}>{t("media")}</h5>
           <div className={classes.contacts}>
-            <Link href={media.github} target="_blank" rel="noopener noreferrer">
-              <Git className={classes.icon} alt="Git icon" />
-            </Link>
-            <Link
-              href={media.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Telegram className={classes.icon} alt="Telegram icon" />
-            </Link>
-            <Link href={media.vk} target="_blank" rel="noopener noreferrer">
-              <LinkedIn className={classes.icon} alt="LinkedIn icon" />
-            </Link>
+            {footerLinks.map((item) => {
+              const Icon = media[item].icon;
+              if (!Icon) return null;
+
+              return (
+                <Link
+                  key={media[item].title}
+                  href={media[item].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.link}
+                >
+                  <Icon className={classes.icon} />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

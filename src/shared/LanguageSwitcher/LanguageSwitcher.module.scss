@@ -18,8 +18,8 @@
 
   &::picker-icon {
     content: "";
-    -webkit-mask: url(../../../public/arrow.svg) no-repeat center/contain;
-    mask: url(../../../public/arrow.svg) no-repeat center/contain;
+    -webkit-mask: url(../../../public/icons/arrow.svg) no-repeat center/contain;
+    mask: url(../../../public/icons/arrow.svg) no-repeat center/contain;
     mask-size: 5px;
     background-color: var(--secondary-color);
     width: 8px;

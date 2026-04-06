@@ -33,16 +33,36 @@
   },
   "Skills": {
     "skills": [
-      { "title": "Frameworks", "list": ["React", "Vue", "Next.JS"] },
-      { "title": "Other", "list": ["HTML", "CSS", "SCSS", "REST"] },
-      { "title": "Languages", "list": ["TypeScript", "JavaScript"] },
-      { "title": "Tools", "list": ["VSCode", "Figma", "Git", "Font Awesome"] }
+      {
+        "title": "Languages",
+        "list": ["TypeScript", "JavaScript"]
+      },
+      {
+        "title": "Frameworks",
+        "list": [
+          "React",
+          "Vue",
+          "Next.JS",
+          "Redux Toolkit",
+          "MobX",
+          "Material UI"
+        ]
+      },
+      {
+        "title": "Other",
+        "list": ["HTML", "CSS", "SCSS", "REST API", "Axios"]
+      },
+      {
+        "title": "Tools",
+        "list": ["VSCode", "Figma", "Git", "GitHub", "Font Awesome", "Vite"]
+      }
     ]
   },
   "Contacts": {
     "subTitle": "Who I am?",
     "title": "Message me here",
-    "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
+    "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
+    "allMedia": "all-media"
   },
   "Header": {
     "home": "home",

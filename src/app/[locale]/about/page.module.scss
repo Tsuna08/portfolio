@@ -1,12 +1,5 @@
 @use "@/src/app/mixins" as *;
 
-.box {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .skills {
   margin-top: 3rem;
   width: 80%;

@@ -1,4 +1,4 @@
-import Dots from "@/public/dots.svg";
+import Dots from "@/public/icons/dots.svg";
 import { Link } from "@/src/i18n/navigation";
 import { Button, Section } from "@/src/shared";
 import cn from "clsx";

@@ -1,4 +1,4 @@
-import { SkillBox, Title } from "@/src/shared";
+import { Section, SkillBox } from "@/src/shared";
 import { AboutMe } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
@@ -15,6 +15,7 @@ export default async function About({ params }: AboutProps) {
   const tAbout = await getTranslations("AboutSection");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
+  // const facts: { id: string; text: string }[] = tAbout.raw("facts");
 
   return (
     <>
@@ -24,16 +25,20 @@ export default async function About({ params }: AboutProps) {
         showLine={false}
         showReadMore={false}
       />
-      <div className={classes.box}>
-        <div>
-          <Title title={tHeader("skills")} />
-          <div className={classes.skills}>
-            {skills.map((item, index) => (
-              <SkillBox key={index} title={item.title} list={item.list} />
-            ))}
-          </div>
+      <Section title={tHeader("skills")} showLine={false}>
+        <div className={classes.skills}>
+          {skills.map((item) => (
+            <SkillBox key={item.title} title={item.title} list={item.list} />
+          ))}
         </div>
-      </div>
+      </Section>
+      {/* <Section title={tAbout("my-fun-facts")} showLine={false}>
+        <div className={classes.skills}>
+          {facts.map((item) => (
+            <div key={item.id}>{item.text}</div>
+          ))}
+        </div>
+      </Section> */}
     </>
   );
 }

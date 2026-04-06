@@ -1,5 +1,5 @@
-import Dots from "@/public/dots.svg";
-import OutlineLogo from "@/public/outline_logo.svg";
+import Dots from "@/public/icons/dots.svg";
+import OutlineLogo from "@/public/icons/outline_logo.svg";
 import { media } from "@/src/constants/media";
 import { mainProjects } from "@/src/constants/projects";
 import { Link } from "@/src/i18n/navigation";
@@ -33,7 +33,7 @@ export default async function Home({ params }: HomeProps) {
             {tHome("title")} <span>{tHome("colorTitle")}</span>
           </h1>
           <p>{tHome("description")}</p>
-          <Link href={media.vk} target="_blank" rel="noopener noreferrer">
+          <Link href={media.vk.url} target="_blank" rel="noopener noreferrer">
             <Button>{tHome("contactBtn")}!!</Button>
           </Link>
         </div>

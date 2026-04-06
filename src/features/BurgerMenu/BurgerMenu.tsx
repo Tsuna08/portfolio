@@ -1,7 +1,7 @@
 "use client";
 
-import BurgerIcon from "@/public/burgerMenu.svg";
-import CloseIcon from "@/public/close.svg";
+import BurgerIcon from "@/public/icons/burgerMenu.svg";
+import CloseIcon from "@/public/icons/close.svg";
 import { Link } from "@/src/i18n/navigation";
 import { LanguageSwitcher } from "@/src/shared";
 import { useTranslations } from "next-intl";

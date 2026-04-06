@@ -1,6 +1,4 @@
-import Email from "@/public/email.svg";
-import Telegram from "@/public/telegram.svg";
-import { media } from "@/src/constants/media";
+import { contactLinks, media } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
 import { Section } from "@/src/shared";
 import { getTranslations } from "next-intl/server";
@@ -31,24 +29,23 @@ export const Contacts = async ({
       <p className={classes.contactInfo}>{info}</p>
       <div className={classes.contacts}>
         <h6>{tContacts("title")}</h6>
-        <Link
-          href={"mailto:" + media.email}
-          className={classes.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Email alt="Email icon" />
-          {media.email}
-        </Link>
-        <Link
-          href={media.telegram}
-          className={classes.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Telegram alt="Telegram icon" />
-          {media.telegramNick}
-        </Link>
+        {contactLinks.map((item) => {
+          const Icon = media[item].icon;
+          if (!Icon) return null;
+
+          return (
+            <Link
+              key={media[item].title}
+              href={media[item].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              <Icon className={classes.icon} />
+              {media[item].title}
+            </Link>
+          );
+        })}
       </div>
     </Section>
   );

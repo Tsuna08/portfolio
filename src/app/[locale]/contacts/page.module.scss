@@ -1,5 +1,20 @@
-.container {
-  height: 100vh;
+.allMedia {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.link,
+.icon {
+  color: var(--secondary-color);
+  &:hover {
+    color: var(--color);
+  }
 }

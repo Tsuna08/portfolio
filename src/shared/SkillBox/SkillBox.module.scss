@@ -3,9 +3,12 @@
 .box {
   border: 1px solid var(--secondary-color);
   min-width: 173px;
-  max-width: 196px;
+  max-width: 186px;
   @include tablet {
     max-width: unset;
+  }
+  @include xxl {
+    max-width: 196px;
   }
 }
 

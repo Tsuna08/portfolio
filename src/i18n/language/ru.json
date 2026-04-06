@@ -33,19 +33,36 @@
   },
   "Skills": {
     "skills": [
-      { "title": "Фреймворки", "list": ["React", "Vue", "Next.JS"] },
-      { "title": "Другое", "list": ["HTML", "CSS", "SCSS", "REST"] },
-      { "title": "Языки", "list": ["TypeScript", "JavaScript"] },
+      {
+        "title": "Языки",
+        "list": ["TypeScript", "JavaScript"]
+      },
+      {
+        "title": "Другое",
+        "list": ["HTML", "CSS", "SCSS", "REST API", "Axios"]
+      },
+      {
+        "title": "Фреймворки",
+        "list": [
+          "React",
+          "Vue",
+          "Next.JS",
+          "Redux Toolkit",
+          "MobX",
+          "Material UI"
+        ]
+      },
       {
         "title": "Инструменты",
-        "list": ["VSCode", "Figma", "Git", "Font Awesome"]
+        "list": ["VSCode", "Figma", "Git", "GitHub", "Font Awesome", "Vite"]
       }
     ]
   },
   "Contacts": {
     "subTitle": "Кто я?",
     "title": "Напишите мне",
-    "info": "Меня интересуют возможности работы фрилансером. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной"
+    "info": "Меня интересуют возможности работы фрилансером. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
+    "allMedia": "все-контакты"
   },
   "Header": {
     "home": "главная",
@@ -56,7 +73,7 @@
   },
   "BurgerMenu": { "closeMenu": "Закрыть меню", "openMenu": "Открыть меню" },
   "Footer": {
-    "media": "Медиа",
+    "media": "Контакты",
     "madeBy": "Создано TsunaDev",
     "description": "Front-end разработчик"
   },
