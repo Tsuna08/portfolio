@@ -1,0 +1,81 @@
+@use "@/src/app/mixins" as *;
+
+.media {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+
+  &.row {
+    gap: 1rem;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+
+    .line {
+      display: none;
+    }
+
+    @include md {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  &.column {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &.withLine {
+    position: fixed;
+    left: 1rem;
+    z-index: 5;
+
+    @include lg {
+      left: 0.5rem;
+    }
+    @include xxl {
+      left: 1.5rem;
+    }
+    @include xxxl {
+      left: 2.5rem;
+    }
+  }
+}
+
+.line {
+  width: 1px;
+  height: 191px;
+  background-color: var(--secondary-color);
+  margin: 0 auto;
+  @include lg {
+    height: 130px;
+  }
+  @include xxl {
+    height: 210px;
+  }
+  @include xxxl {
+    height: 230px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color);
+  }
+}
+
+.icon {
+  transition: color 0.2s ease;
+}

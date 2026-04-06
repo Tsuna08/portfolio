@@ -1,14 +1,15 @@
 import "../globals.css";
 
+import { mediaLinks } from "@/src/constants/media";
 import { Locale, locales } from "@/src/i18n/config";
-import { Footer, Header, Media } from "@/src/widget";
+import { Media } from "@/src/shared/Media";
+import { Footer, Header } from "@/src/widget";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { Fira_Code } from "next/font/google";
 import { notFound } from "next/navigation";
-
 import classes from "./layout.module.scss";
 
 const validLocales = new Set<string>(locales);
@@ -47,7 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className={`${firaCode.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <Media />
+          <Media links={mediaLinks} direction="column" showLine={true} />
           <main className={classes.main}>{children}</main>
           <Footer />
         </NextIntlClientProvider>

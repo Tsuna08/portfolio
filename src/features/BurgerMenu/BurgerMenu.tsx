@@ -2,8 +2,9 @@
 
 import BurgerIcon from "@/public/icons/burgerMenu.svg";
 import CloseIcon from "@/public/icons/close.svg";
+import { mediaLinks } from "@/src/constants/media";
 import { Link } from "@/src/i18n/navigation";
-import { LanguageSwitcher } from "@/src/shared";
+import { LanguageSwitcher, Media } from "@/src/shared";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import classes from "./BurgerMenu.module.scss";
@@ -53,7 +54,12 @@ export const BurgerMenu = ({ links }: BurgerMenuProps) => {
                 ))}
               </ul>
             </nav>
-            <LanguageSwitcher />
+            <div>
+              <LanguageSwitcher />
+            </div>
+            <div className={classes.icons}>
+              <Media links={mediaLinks} />
+            </div>
           </div>
         </div>
       )}

@@ -16,4 +16,8 @@
   @include xxxl {
     padding: 0 12%;
   }
+
+  & > :last-child {
+    margin-bottom: 10%;
+  }
 }

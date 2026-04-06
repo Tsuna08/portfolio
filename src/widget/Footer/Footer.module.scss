@@ -81,10 +81,9 @@
   height: 21px;
 }
 
-.email,
-.link,
-.icon {
+.email {
   color: var(--secondary-color);
+  transition: color 0.2s ease;
   &:hover {
     color: var(--color);
   }

@@ -6,7 +6,7 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  margin: 5% 0;
+  margin-top: 5%;
   gap: 2rem;
   @include tablet {
     flex-direction: column;
@@ -61,9 +61,6 @@
   position: relative;
   z-index: 2;
   height: fit-content;
-  @include xxl {
-    width: 25vw;
-  }
 }
 
 .logoTmg {
@@ -192,7 +189,7 @@
 .boxLogo {
   grid-area: logo;
   color: var(--primary-color);
-  transform: scale(1.346) translate(1.8rem, 1rem);
+  transform: scale(1.146) translate(1.8rem, 0.5rem);
 }
 
 .box {

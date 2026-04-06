@@ -21,6 +21,7 @@
   align-items: center;
   gap: 0.3rem;
   color: var(--secondary-color);
+  transition: color 0.2s ease;
 
   &:hover {
     color: var(--color);

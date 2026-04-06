@@ -96,3 +96,21 @@
 .sharp {
   color: var(--primary-color);
 }
+
+.icons {
+  width: 100%;
+
+  a {
+    width: 40px;
+    height: 40px;
+  }
+  svg {
+    transform: scale(1.5);
+  }
+
+  & > div > :first-child {
+    svg {
+      transform: scale(1.65);
+    }
+  }
+}
