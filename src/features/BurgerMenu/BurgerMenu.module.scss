@@ -54,7 +54,6 @@
   }
   select {
     font-size: 2rem;
-    align-items: flex-start;
     height: fit-content;
   }
 }
@@ -99,18 +98,18 @@
 
 .icons {
   width: 100%;
-
-  a {
-    width: 40px;
-    height: 40px;
-  }
-  svg {
-    transform: scale(1.5);
-  }
-
-  & > div > :first-child {
-    svg {
-      transform: scale(1.65);
+  div {
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    @include mobile {
+      width: 90%;
     }
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
   }
 }

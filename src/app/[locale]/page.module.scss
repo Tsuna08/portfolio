@@ -26,6 +26,9 @@
   @include tablet {
     max-width: unset;
   }
+  @include mobile {
+    align-items: center;
+  }
   h1 {
     font-size: 32px;
     font-weight: 600;
@@ -41,11 +44,6 @@
   @include sm {
     p {
       text-align: justify;
-    }
-  }
-  @include md {
-    button {
-      display: none;
     }
   }
 }
