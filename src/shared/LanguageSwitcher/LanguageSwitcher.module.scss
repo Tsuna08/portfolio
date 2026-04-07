@@ -7,6 +7,7 @@
   justify-content: flex-start;
   gap: 3px;
   cursor: pointer;
+  transition: color 0.2s ease;
 
   &:hover,
   &:focus-visible {

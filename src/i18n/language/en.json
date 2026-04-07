@@ -14,7 +14,48 @@
     ],
     "readMoreBtn": "Read more",
     "my-fun-facts": "my-fun-facts",
-    "facts": [{ "id": "fact-1", "text": "..." }]
+    "facts": [
+      {
+        "id": "fact-1",
+        "fact": [
+          { "text": "I " },
+          { "text": "paint ", "color": true },
+          { "text": "pictures and " },
+          { "text": "customize ", "color": true },
+          { "text": "things" }
+        ]
+      },
+      {
+        "id": "fact-2",
+        "fact": [
+          { "text": "I blog about my life on " },
+          { "text": "Telegram", "color": true }
+        ]
+      },
+      {
+        "id": "fact-3",
+        "fact": [
+          { "text": "I've been " },
+          { "text": "snowboarding ", "color": true },
+          { "text": "for over " },
+          { "text": "5 years", "color": true }
+        ]
+      },
+      {
+        "id": "fact-4",
+        "fact": [
+          { "text": "I've visited over " },
+          { "text": "20 countries", "color": true }
+        ]
+      },
+      {
+        "id": "fact-5",
+        "fact": [
+          { "text": "I dream of climbing " },
+          { "text": "Mount Elbrus", "color": true }
+        ]
+      }
+    ]
   },
   "Projects": {
     "subTitle": "List of my projects",

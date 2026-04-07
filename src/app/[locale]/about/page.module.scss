@@ -18,3 +18,26 @@
     width: 60%;
   }
 }
+
+.facts {
+  max-width: 705px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+
+  @include xxl {
+    max-width: unset;
+    width: 80%;
+  }
+}
+
+.fact {
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.color {
+  color: var(--color);
+}

@@ -15,7 +15,8 @@ export default async function About({ params }: AboutProps) {
   const tAbout = await getTranslations("AboutSection");
   const tSkills = await getTranslations("Skills");
   const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
-  // const facts: { id: string; text: string }[] = tAbout.raw("facts");
+  const facts: { id: string; fact: { text: string; color?: true }[] }[] =
+    tAbout.raw("facts");
 
   return (
     <>
@@ -32,13 +33,25 @@ export default async function About({ params }: AboutProps) {
           ))}
         </div>
       </Section>
-      {/* <Section title={tAbout("my-fun-facts")} showLine={false}>
-        <div className={classes.skills}>
+      <Section title={tAbout("my-fun-facts")} showLine={false}>
+        <div className={classes.facts}>
           {facts.map((item) => (
-            <div key={item.id}>{item.text}</div>
+            <div key={item.id} className={classes.fact}>
+              {item?.fact?.map((fact, index) => (
+                <>
+                  {fact.color ? (
+                    <span key={index} className={classes.color}>
+                      {fact.text}
+                    </span>
+                  ) : (
+                    <span key={index}>{fact.text}</span>
+                  )}
+                </>
+              ))}
+            </div>
           ))}
         </div>
-      </Section> */}
+      </Section>
     </>
   );
 }

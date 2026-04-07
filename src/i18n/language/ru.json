@@ -14,7 +14,47 @@
     ],
     "readMoreBtn": "Подробнее",
     "my-fun-facts": "интересные-факты",
-    "facts": [{ "id": "fact-1", "text": "..." }]
+    "facts": [
+      {
+        "id": "fact-1",
+        "fact": [
+          { "text": "Рисую ", "color": true },
+          { "text": "картины и " },
+          { "text": "кастомизирую ", "color": true },
+          { "text": "вещи" }
+        ]
+      },
+      {
+        "id": "fact-2",
+        "fact": [
+          { "text": "Веду блог о своей жизни в " },
+          { "text": "Телеграмме", "color": true }
+        ]
+      },
+      {
+        "id": "fact-3",
+        "fact": [
+          { "text": "Больше " },
+          { "text": "5 лет ", "color": true },
+          { "text": "катаюсь на " },
+          { "text": "сноуборде", "color": true }
+        ]
+      },
+      {
+        "id": "fact-4",
+        "fact": [
+          { "text": "Посетила больше " },
+          { "text": "20 стран", "color": true }
+        ]
+      },
+      {
+        "id": "fact-5",
+        "fact": [
+          { "text": "Мечтаю подняться на " },
+          { "text": "Эльбрус", "color": true }
+        ]
+      }
+    ]
   },
   "Projects": {
     "subTitle": "Список моих проектов",
