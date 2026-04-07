@@ -164,7 +164,12 @@
     height: unset;
   }
   @include tablet {
-    transform: scale(0.5) translateX(-50%) translateY(-35%);
+    height: 250px;
+    transform: scale(0.8) translateX(-18%) translateY(-12%);
+  }
+  @include mobile {
+    height: 215px;
+    transform: scale(0.7) translateX(-18%) translateY(-20%);
   }
 }
 

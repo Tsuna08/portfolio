@@ -12,7 +12,7 @@
   @include tablet {
     flex-direction: column;
     margin: 10% 0;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 
@@ -24,6 +24,5 @@
   gap: 2rem;
   @include tablet {
     flex-direction: column;
-    gap: 1rem;
   }
 }
