@@ -70,33 +70,19 @@
       "title": "TxtOnImg",
       "description": "An extension for adding text to images online",
       "labelBtn": "Live"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "A blog is a content management system designed for publishing articles and posts",
+      "labelBtn": "GitHub"
     }
   },
   "Skills": {
     "skills": [
-      {
-        "title": "Languages",
-        "list": ["TypeScript", "JavaScript"]
-      },
-      {
-        "title": "Frameworks",
-        "list": [
-          "React",
-          "Vue",
-          "Next.JS",
-          "Redux Toolkit",
-          "MobX",
-          "Material UI"
-        ]
-      },
-      {
-        "title": "Other",
-        "list": ["HTML", "CSS", "SCSS", "REST API", "Axios"]
-      },
-      {
-        "title": "Tools",
-        "list": ["VSCode", "Figma", "Git", "GitHub", "Font Awesome", "Vite"]
-      }
+      { "id": "languages", "title": "Languages" },
+      { "id": "other", "title": "Other" },
+      { "id": "frameworks", "title": "Frameworks" },
+      { "id": "tools", "title": "Tools" }
     ]
   },
   "Contacts": {

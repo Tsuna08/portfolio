@@ -7,6 +7,16 @@
 .photo {
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
+
+  @include xl {
+    max-height: 195px;
+  }
+  @include lg {
+    max-height: 195px;
+  }
+  @include tablet {
+    max-height: unset;
+  }
 }
 
 .skills {

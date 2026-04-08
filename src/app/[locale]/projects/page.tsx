@@ -1,4 +1,4 @@
-import { completeApps } from "@/src/constants/projects";
+import { apps, completeApps } from "@/src/constants/projects";
 import { Project, Section, Title } from "@/src/shared";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
@@ -25,16 +25,16 @@ export default async function Projects({ params }: ProjectsProps) {
         <Title title={tProjects("complete-apps")} />
         <div className={classes.list}>
           {completeApps.map((item) => {
-            const project = tProjects.raw(item.id);
+            const project = tProjects.raw(item);
             return (
               <Project
-                key={item.id}
+                key={item}
                 title={project.title}
-                technologies={item.technologies}
-                image={item.image}
+                technologies={apps[item].technologies}
+                image={apps[item].image}
                 description={project.description}
                 labelBtn={project.labelBtn}
-                link={item.link}
+                link={apps[item].link}
               />
             );
           })}

@@ -69,33 +69,19 @@
       "title": "TxtOnImg",
       "description": "Расширение для добавления текста на картинку онлайн",
       "labelBtn": "Live"
+    },
+    "blog": {
+      "title": "Блог",
+      "description": "Блог — это система управления контентом, предназначенная для публикации статей и постов.",
+      "labelBtn": "GitHub"
     }
   },
   "Skills": {
     "skills": [
-      {
-        "title": "Языки",
-        "list": ["TypeScript", "JavaScript"]
-      },
-      {
-        "title": "Другое",
-        "list": ["HTML", "CSS", "SCSS", "REST API", "Axios"]
-      },
-      {
-        "title": "Фреймворки",
-        "list": [
-          "React",
-          "Vue",
-          "Next.JS",
-          "Redux Toolkit",
-          "MobX",
-          "Material UI"
-        ]
-      },
-      {
-        "title": "Инструменты",
-        "list": ["VSCode", "Figma", "Git", "GitHub", "Font Awesome", "Vite"]
-      }
+      { "id": "languages", "title": "Языки" },
+      { "id": "other", "title": "Другое" },
+      { "id": "frameworks", "title": "Фреймворки" },
+      { "id": "tools", "title": "Инструменты" }
     ]
   },
   "Contacts": {

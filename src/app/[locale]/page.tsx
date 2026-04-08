@@ -1,7 +1,8 @@
 import Dots from "@/public/icons/dots.svg";
 import OutlineLogo from "@/public/icons/outline_logo.svg";
 import { media } from "@/src/constants/media";
-import { mainProjects } from "@/src/constants/projects";
+import { apps, mainApps } from "@/src/constants/projects";
+import { SkillId, skills } from "@/src/constants/skills";
 import { Link } from "@/src/i18n/navigation";
 import { Button, Project, Section, SkillBox } from "@/src/shared";
 import { AboutMe, Contacts } from "@/src/widget";
@@ -22,7 +23,7 @@ export default async function Home({ params }: HomeProps) {
   const tTitle = await getTranslations("Header");
   const tProjects = await getTranslations("Projects");
   const tSkills = await getTranslations("Skills");
-  const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
+  const skillsTitle = tSkills.raw("skills") as { id: SkillId; title: string }[];
 
   return (
     <>
@@ -61,17 +62,17 @@ export default async function Home({ params }: HomeProps) {
         }
       >
         <div className={classes.projectList}>
-          {mainProjects.map((item) => {
-            const project = tProjects.raw(item.id);
+          {mainApps.map((item) => {
+            const project = tProjects.raw(item);
             return (
               <Project
-                key={item.id}
+                key={item}
                 title={project.title}
-                technologies={item.technologies}
-                image={item.image}
+                technologies={apps[item].technologies}
+                image={apps[item].image}
                 description={project.description}
                 labelBtn={project.labelBtn}
-                link={item.link}
+                link={apps[item].link}
               />
             );
           })}
@@ -88,8 +89,8 @@ export default async function Home({ params }: HomeProps) {
           <div className={classes.smallBox} />
         </div>
         <div className={cn(classes.skills)}>
-          {skills.map((item) => (
-            <SkillBox key={item.title} title={item.title} list={item.list} />
+          {skillsTitle.map((item) => (
+            <SkillBox key={item.id} title={item.title} list={skills[item.id]} />
           ))}
         </div>
       </Section>
