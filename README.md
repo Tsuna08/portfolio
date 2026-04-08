@@ -2,6 +2,10 @@
 
 A multilingual portfolio website built with Next.js and TypeScript.
 
+## Preview
+
+![Portfolio Preview](public/projects/portfolio.png)
+
 ## Technologies
 
 - **Next.js**
@@ -60,7 +64,3 @@ yarn lint
 # Run prettier
 yarn lint
 ```
-
-## Preview
-
-![Portfolio Preview](public/projects/portfolio.png)

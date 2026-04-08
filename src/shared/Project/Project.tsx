@@ -34,11 +34,7 @@ export const Project = ({
           loading="lazy"
         />
       )}
-      <div className={classes.skills}>
-        {technologies?.map((item) => (
-          <p key={item}>{item}</p>
-        ))}
-      </div>
+      <div className={classes.skills}>{technologies?.join(", ")}</div>
       <div className={classes.content}>
         <h5 className={classes.title}>{title}</h5>
         <p className={classes.description}>{description}</p>

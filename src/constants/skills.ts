@@ -2,16 +2,25 @@ export type SkillId = "languages" | "other" | "frameworks" | "tools";
 
 export const skills = {
   languages: ["TypeScript", "JavaScript"],
-  other: ["HTML", "CSS", "SCSS", "Yup", "Firebase", "i18n"],
+  other: [
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Axios",
+    "Fabric.js",
+    "Firebase",
+    "i18n",
+    "Yup",
+  ],
   frameworks: [
     "React",
-    "Vue",
-    "Next.JS",
-    "Redux Toolkit",
-    "MobX",
+    "Next.js",
     "Material UI",
-    "React Router",
-    "React Hook Form",
+    "Redux Toolkit",
+    "Vue",
+    "Pinia",
+    "Vue Router",
+    "MobX",
   ],
-  tools: ["VSCode", "Git", "GitHub", "Vite", "ESLint", "Prettier"],
+  tools: ["ESLint", "Git", "GitHub", "Prettier", "Vite", "VSCode"],
 };

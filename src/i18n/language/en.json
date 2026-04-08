@@ -68,12 +68,22 @@
     },
     "txtOnImg": {
       "title": "TxtOnImg",
-      "description": "An extension for adding text to images online",
+      "description": "Online text-on-image editor",
       "labelBtn": "Live"
     },
     "blog": {
       "title": "Blog",
-      "description": "A blog is a content management system designed for publishing articles and posts",
+      "description": "A blog is a platform for publishing articles",
+      "labelBtn": "GitHub"
+    },
+    "pizza": {
+      "title": "Pizza Project",
+      "description": "A pizza ordering application",
+      "labelBtn": "GitHub"
+    },
+    "cinema": {
+      "title": "Cinema Project",
+      "description": "An application for booking movie tickets",
       "labelBtn": "GitHub"
     }
   },

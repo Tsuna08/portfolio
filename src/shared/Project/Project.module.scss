@@ -7,7 +7,9 @@
 .photo {
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
-
+  @include xxl {
+    max-height: 210px;
+  }
   @include xl {
     max-height: 195px;
   }
@@ -22,7 +24,6 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
   border-bottom: 1px solid var(--secondary-color);
   padding: 0.3rem 0.5rem;
   color: var(--secondary-color);
@@ -31,7 +32,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
   gap: 1rem;
 }
 
