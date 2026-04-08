@@ -10,7 +10,7 @@ export const completeApps: AppsKey[] = ["portfolio", "txtOnImg", "blog"];
 
 export const apps: Record<AppsKey, AppsContent> = {
   portfolio: {
-    technologies: ["React", "Next.js", "TypeScript", "SCSS"],
+    technologies: ["React", "Next.js", "TypeScript", "SCSS", "i18n"],
     image: "/projects/portfolio.png",
     link: "https://github.com/Tsuna08/portfolio",
   },
