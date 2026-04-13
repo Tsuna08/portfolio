@@ -18,7 +18,7 @@ export const media: Record<MediaKey, SocialLink> = {
     icon: Git,
   },
   telegram: {
-    url: "https://t.me/tsuna_dev",
+    url: "tg://resolve?domain=tsuna_dev",
     title: "tsuna_dev",
     icon: Telegram,
   },

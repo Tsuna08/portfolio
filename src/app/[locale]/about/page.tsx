@@ -1,6 +1,8 @@
+import { SkillId, skills } from "@/src/constants/skills";
 import { Section, SkillBox } from "@/src/shared";
 import { AboutMe } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Fragment } from "react";
 import classes from "./page.module.scss";
 
 interface AboutProps {
@@ -14,7 +16,7 @@ export default async function About({ params }: AboutProps) {
   const tHeader = await getTranslations("Header");
   const tAbout = await getTranslations("AboutSection");
   const tSkills = await getTranslations("Skills");
-  const skills: { title: string; list: string[] }[] = tSkills.raw("skills");
+  const skillsTitle: { id: SkillId; title: string }[] = tSkills.raw("skills");
   const facts: { id: string; fact: { text: string; color?: true }[] }[] =
     tAbout.raw("facts");
 
@@ -28,8 +30,8 @@ export default async function About({ params }: AboutProps) {
       />
       <Section title={tHeader("skills")} showLine={false}>
         <div className={classes.skills}>
-          {skills.map((item) => (
-            <SkillBox key={item.title} title={item.title} list={item.list} />
+          {skillsTitle.map((item) => (
+            <SkillBox key={item.id} title={item.title} list={skills[item.id]} />
           ))}
         </div>
       </Section>
@@ -38,7 +40,7 @@ export default async function About({ params }: AboutProps) {
           {facts.map((item) => (
             <div key={item.id} className={classes.fact}>
               {item?.fact?.map((fact, index) => (
-                <>
+                <Fragment key={index}>
                   {fact.color ? (
                     <span key={index} className={classes.color}>
                       {fact.text}
@@ -46,7 +48,7 @@ export default async function About({ params }: AboutProps) {
                   ) : (
                     <span key={index}>{fact.text}</span>
                   )}
-                </>
+                </Fragment>
               ))}
             </div>
           ))}

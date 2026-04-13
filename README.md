@@ -60,7 +60,4 @@ yarn build
 
 # Run linter
 yarn lint
-
-# Run prettier
-yarn lint
 ```

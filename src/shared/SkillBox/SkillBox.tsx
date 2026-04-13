@@ -5,17 +5,15 @@ interface SkillBoxProps {
   list: string[];
 }
 
-export const SkillBox = ({ title, list }: SkillBoxProps) => {
-  return (
-    <div className={classes.box}>
-      <p className={classes.title}>{title}</p>
-      <div className={classes.content}>
-        {list.map((item) => (
-          <p className={classes.skill} key={item}>
-            {item}
-          </p>
-        ))}
-      </div>
+export const SkillBox = ({ title, list }: SkillBoxProps) => (
+  <div className={classes.box}>
+    <p className={classes.title}>{title}</p>
+    <div className={classes.content}>
+      {list.map((item) => (
+        <p className={classes.skill} key={item}>
+          {item}
+        </p>
+      ))}
     </div>
-  );
-};
+  </div>
+);
