@@ -60,6 +60,7 @@
   "Projects": {
     "subTitle": "List of my projects",
     "complete-apps": "complete-apps",
+    "small-apps": "small-apps",
     "viewAll": "View all",
     "buttons": {
       "git": "GitHub",
@@ -84,6 +85,22 @@
     "cinema": {
       "title": "PRISM Cinema",
       "description": "An application for booking movie tickets"
+    },
+    "diary": {
+      "title": "Personal Diary",
+      "description": "A small project to practice basic React skills"
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "A multilingual calendar component built with Vue 3 and TypeScript"
+    },
+    "myCharity": {
+      "title": "My Charity",
+      "description": "A landing page for a charity organization"
+    },
+    "petsShop": {
+      "title": "Pets Shop",
+      "description": "A landing page for a pet shop"
     }
   },
   "Skills": {

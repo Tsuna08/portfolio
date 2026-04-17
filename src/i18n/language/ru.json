@@ -59,6 +59,7 @@
   "Projects": {
     "subTitle": "Список моих проектов",
     "complete-apps": "сложные-приложения",
+    "small-apps": "маленькие-проекты",
     "viewAll": "Посмотреть все",
     "buttons": {
       "git": "GitHub",
@@ -83,6 +84,22 @@
     "cinema": {
       "title": "PRISM Cinema",
       "description": "Приложение для бронирования билетов в кино"
+    },
+    "diary": {
+      "title": "Личный дневник",
+      "description": "Небольшой проект для практики базовых навыков React"
+    },
+    "calendar": {
+      "title": "Календарь",
+      "description": "Многоязыковый компонент календаря, созданный с использованием Vue 3 и TypeScript"
+    },
+    "myCharity": {
+      "title": "My Charity",
+      "description": "Проект для благотворительной организации, предоставляющей помощь нуждающимся"
+    },
+    "petsShop": {
+      "title": "Pets Shop",
+      "description": "Простой сайт для магазина домашних животных"
     }
   },
   "Skills": {

@@ -1,10 +1,19 @@
-export type AppsKey = "portfolio" | "waterSeal" | "blog" | "pizza" | "cinema";
+export type AppsKey =
+  | "portfolio"
+  | "waterSeal"
+  | "blog"
+  | "pizza"
+  | "cinema"
+  | "diary"
+  | "calendar"
+  | "myCharity"
+  | "petsShop";
 export type ButtonKey = "git" | "demo";
 
 export interface AppsContent {
   technologies: string[];
-  image: string;
   buttons: { link: string; label: ButtonKey }[];
+  image?: string;
 }
 
 export const mainApps: AppsKey[] = ["portfolio", "blog", "waterSeal"];
@@ -14,6 +23,12 @@ export const completeApps: AppsKey[] = [
   "waterSeal",
   "pizza",
   "cinema",
+];
+export const smallApps: AppsKey[] = [
+  "diary",
+  "calendar",
+  "myCharity",
+  "petsShop",
 ];
 
 export const apps: Record<AppsKey, AppsContent> = {
@@ -63,6 +78,42 @@ export const apps: Record<AppsKey, AppsContent> = {
     buttons: [
       {
         link: "https://github.com/Tsuna08/prism-cinema",
+        label: "git",
+      },
+    ],
+  },
+  diary: {
+    technologies: ["React", "TypeScript", "Vite", "SCSS"],
+    buttons: [
+      {
+        link: " https://github.com/Tsuna08/personal-diary",
+        label: "git",
+      },
+    ],
+  },
+  calendar: {
+    technologies: ["Vue 3", "TypeScript", "CSS", "i18n"],
+    buttons: [
+      {
+        link: "https://github.com/Tsuna08/calendar",
+        label: "git",
+      },
+    ],
+  },
+  myCharity: {
+    technologies: ["HTML", "CSS", "Sass", "Grid", "Layout", "Flexbox"],
+    buttons: [
+      {
+        link: "https://github.com/Tsuna08/my-charity",
+        label: "git",
+      },
+    ],
+  },
+  petsShop: {
+    technologies: ["HTML", "CSS", "Grid", "Layout", "Flexbox"],
+    buttons: [
+      {
+        link: "https://github.com/Tsuna08/pets-shop",
         label: "git",
       },
     ],
