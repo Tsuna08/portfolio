@@ -11,9 +11,9 @@ export const mainApps: AppsKey[] = ["portfolio", "blog", "waterSeal"];
 export const completeApps: AppsKey[] = [
   "portfolio",
   "blog",
+  "waterSeal",
   "pizza",
   "cinema",
-  "waterSeal",
 ];
 
 export const apps: Record<AppsKey, AppsContent> = {

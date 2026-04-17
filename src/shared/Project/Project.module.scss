@@ -8,7 +8,7 @@
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   @include xxl {
-    max-height: 210px;
+    max-height: unset;
   }
   @include xl {
     max-height: 195px;
