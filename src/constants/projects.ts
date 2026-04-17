@@ -32,7 +32,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/waterSeal.png",
     buttons: [
       {
-        link: "https://github.com/Tsuna08/watermarks-extension",
+        link: "https://github.com/Tsuna08/water-seal",
         label: "git",
       },
     ],
@@ -52,7 +52,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/pizza.png",
     buttons: [
       {
-        link: "https://github.com/Tsuna08/pizza-project",
+        link: "https://github.com/Tsuna08/pizza-and-co",
         label: "git",
       },
     ],
@@ -62,7 +62,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/cinema.png",
     buttons: [
       {
-        link: "https://github.com/Tsuna08/vue-cinema",
+        link: "https://github.com/Tsuna08/prism-cinema",
         label: "git",
       },
     ],
