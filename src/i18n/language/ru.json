@@ -60,30 +60,29 @@
     "subTitle": "Список моих проектов",
     "complete-apps": "сложные-приложения",
     "viewAll": "Посмотреть все",
-    "portfolio": {
-      "title": "Портфолио",
-      "description": "Вы используете его прямо сейчас",
-      "labelBtn": "GitHub"
+    "buttons": {
+      "git": "GitHub",
+      "demo": "Демо"
     },
-    "txtOnImg": {
-      "title": "TxtOnImg",
-      "description": "Онлайн-редактор текста на изображениях",
-      "labelBtn": "Live"
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Вы используете его прямо сейчас"
+    },
+    "waterSeal": {
+      "title": "WaterSeal",
+      "description": "Онлайн-редактор текста на изображениях"
     },
     "blog": {
-      "title": "Блог",
-      "description": "Блог — платформа для публикации статей",
-      "labelBtn": "GitHub"
+      "title": "Blog",
+      "description": "Blog — платформа для публикации статей"
     },
     "pizza": {
-      "title": "Пиццерия",
-      "description": "Приложение для заказа пиццы",
-      "labelBtn": "GitHub"
+      "title": "Pizza & CO",
+      "description": "Приложение для заказа пиццы"
     },
     "cinema": {
-      "title": "Кинотеатр",
-      "description": "Приложение для бронирования билетов в кино",
-      "labelBtn": "GitHub"
+      "title": "PRISM Cinema",
+      "description": "Приложение для бронирования билетов в кино"
     }
   },
   "Skills": {

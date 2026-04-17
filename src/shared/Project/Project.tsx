@@ -1,3 +1,4 @@
+import { ButtonKey } from "@/src/constants/projects";
 import { Link } from "@/src/i18n/navigation";
 import Image from "next/image";
 import { Button } from "../Button";
@@ -8,8 +9,8 @@ interface ProjectProps {
   description?: string;
   image?: string;
   technologies?: string[];
-  labelBtn?: string;
-  link?: string;
+  buttons?: { link: string; label: ButtonKey }[];
+  translator: Record<ButtonKey, string>;
 }
 
 export const Project = ({
@@ -17,8 +18,8 @@ export const Project = ({
   description,
   image,
   technologies,
-  labelBtn,
-  link,
+  buttons,
+  translator,
 }: ProjectProps) => {
   const symbol = "<~>";
 
@@ -38,13 +39,13 @@ export const Project = ({
       <div className={classes.content}>
         <h5 className={classes.title}>{title}</h5>
         <p className={classes.description}>{description}</p>
-        {link && labelBtn && (
-          <Link href={link}>
+        {buttons?.map((button, index) => (
+          <Link href={button.link} key={index}>
             <Button>
-              {labelBtn} {symbol}
+              {translator[button.label]} {symbol}
             </Button>
           </Link>
-        )}
+        ))}
       </div>
     </div>
   );

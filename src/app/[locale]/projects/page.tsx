@@ -13,6 +13,7 @@ export default async function Projects({ params }: ProjectsProps) {
 
   const tHeader = await getTranslations("Header");
   const tProjects = await getTranslations("Projects");
+  const buttonsTitle = tProjects.raw("buttons");
 
   return (
     <Section
@@ -33,8 +34,8 @@ export default async function Projects({ params }: ProjectsProps) {
                 technologies={apps[item].technologies}
                 image={apps[item].image}
                 description={project.description}
-                labelBtn={project.labelBtn}
-                link={apps[item].link}
+                buttons={apps[item].buttons}
+                translator={buttonsTitle}
               />
             );
           })}

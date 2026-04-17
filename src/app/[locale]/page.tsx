@@ -24,6 +24,7 @@ export default async function Home({ params }: HomeProps) {
   const tProjects = await getTranslations("Projects");
   const tSkills = await getTranslations("Skills");
   const skillsTitle = tSkills.raw("skills") as { id: SkillId; title: string }[];
+  const buttonsTitle = tProjects.raw("buttons");
 
   return (
     <>
@@ -71,8 +72,8 @@ export default async function Home({ params }: HomeProps) {
                 technologies={apps[item].technologies}
                 image={apps[item].image}
                 description={project.description}
-                labelBtn={project.labelBtn}
-                link={apps[item].link}
+                buttons={apps[item].buttons}
+                translator={buttonsTitle}
               />
             );
           })}

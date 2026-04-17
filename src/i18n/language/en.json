@@ -61,30 +61,29 @@
     "subTitle": "List of my projects",
     "complete-apps": "complete-apps",
     "viewAll": "View all",
+    "buttons": {
+      "git": "GitHub",
+      "demo": "Demo"
+    },
     "portfolio": {
       "title": "Portfolio",
-      "description": "You're using it right now",
-      "labelBtn": "GitHub"
+      "description": "You're using it right now"
     },
-    "txtOnImg": {
-      "title": "TxtOnImg",
-      "description": "Online text-on-image editor",
-      "labelBtn": "Live"
+    "waterSeal": {
+      "title": "WaterSeal",
+      "description": "Online text-on-image editor"
     },
     "blog": {
       "title": "Blog",
-      "description": "A blog is a platform for publishing articles",
-      "labelBtn": "GitHub"
+      "description": "A blog is a platform for publishing articles"
     },
     "pizza": {
-      "title": "Pizza Project",
-      "description": "A pizza ordering application",
-      "labelBtn": "GitHub"
+      "title": "Pizza & CO",
+      "description": "A pizza ordering application"
     },
     "cinema": {
-      "title": "Cinema Project",
-      "description": "An application for booking movie tickets",
-      "labelBtn": "GitHub"
+      "title": "PRISM Cinema",
+      "description": "An application for booking movie tickets"
     }
   },
   "Skills": {
