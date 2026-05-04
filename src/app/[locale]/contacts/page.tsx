@@ -1,4 +1,6 @@
 import { allMediaLinks } from "@/src/constants/media";
+import { routes } from "@/src/constants/routes";
+import { createI18nMetadata } from "@/src/metadata";
 import { Media, Section } from "@/src/shared";
 import { Contacts } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -28,4 +30,8 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
       </Section>
     </>
   );
+}
+
+export async function generateMetadata() {
+  return createI18nMetadata("Contacts", routes.contacts);
 }

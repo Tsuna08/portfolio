@@ -4,6 +4,8 @@ import {
   completeApps,
   smallApps,
 } from "@/src/constants/projects";
+import { routes } from "@/src/constants/routes";
+import { createI18nMetadata } from "@/src/metadata";
 import { Project, Section, Title } from "@/src/shared";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import classes from "./page.module.scss";
@@ -68,4 +70,8 @@ export default async function Projects({ params }: ProjectsProps) {
       </div>
     </Section>
   );
+}
+
+export async function generateMetadata() {
+  return createI18nMetadata("Projects", routes.projects);
 }

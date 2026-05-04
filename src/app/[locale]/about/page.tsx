@@ -1,4 +1,6 @@
+import { routes } from "@/src/constants/routes";
 import { SkillId, skills } from "@/src/constants/skills";
+import { createI18nMetadata } from "@/src/metadata";
 import { Section, SkillBox } from "@/src/shared";
 import { AboutMe } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -56,4 +58,8 @@ export default async function About({ params }: AboutProps) {
       </Section>
     </>
   );
+}
+
+export async function generateMetadata() {
+  return createI18nMetadata("AboutSection", routes.about);
 }

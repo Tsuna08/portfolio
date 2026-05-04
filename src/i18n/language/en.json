@@ -3,7 +3,8 @@
     "title": "Tsyganova Anna is a",
     "colorTitle": "front-end developer",
     "description": "I craft responsive websites where technologies meet creativity",
-    "contactBtn": "Contact me"
+    "contactBtn": "Contact me",
+    "keywords": ["portfolio", "about me", "skills"]
   },
   "AboutSection": {
     "subTitle": "Who I am?",
@@ -12,6 +13,7 @@
       "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
+    "keywords": ["portfolio", "about me", "skills"],
     "readMoreBtn": "Read more",
     "my-fun-facts": "my-fun-facts",
     "facts": [
@@ -66,6 +68,7 @@
       "git": "GitHub",
       "demo": "Demo"
     },
+    "keywords": ["portfolio", "projects", "works"],
     "portfolio": {
       "title": "Portfolio",
       "description": "You're using it right now"
@@ -115,7 +118,8 @@
     "subTitle": "Who I am?",
     "title": "Message me here",
     "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
-    "allMedia": "all-media"
+    "allMedia": "all-media",
+    "keywords": ["portfolio", "contacts", "get in touch"]
   },
   "Header": {
     "home": "home",

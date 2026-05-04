@@ -2,8 +2,10 @@ import Dots from "@/public/icons/dots.svg";
 import OutlineLogo from "@/public/icons/outline_logo.svg";
 import { media } from "@/src/constants/media";
 import { apps, mainApps } from "@/src/constants/projects";
+import { routes } from "@/src/constants/routes";
 import { SkillId, skills } from "@/src/constants/skills";
 import { Link } from "@/src/i18n/navigation";
+import { createI18nMetadata } from "@/src/metadata";
 import { Button, Project, Section, SkillBox } from "@/src/shared";
 import { AboutMe, Contacts } from "@/src/widget";
 import cn from "clsx";
@@ -105,12 +107,6 @@ export default async function Home({ params }: HomeProps) {
   );
 }
 
-export async function generateMetadata({ params }: HomeProps) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Home" });
-
-  return {
-    title: `${t("title")} ${t("colorTitle")}`,
-    description: t("description"),
-  };
+export async function generateMetadata() {
+  return createI18nMetadata("Home", routes.root);
 }
