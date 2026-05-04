@@ -1,3 +1,4 @@
+import { media } from "@/src/constants/media";
 import { routes } from "@/src/constants/routes";
 import { SkillId, skills } from "@/src/constants/skills";
 import { createI18nMetadata } from "@/src/metadata";
@@ -39,21 +40,36 @@ export default async function About({ params }: AboutProps) {
       </Section>
       <Section title={tAbout("my-fun-facts")} showLine={false}>
         <div className={classes.facts}>
-          {facts.map((item) => (
-            <div key={item.id} className={classes.fact}>
-              {item?.fact?.map((fact, index) => (
-                <Fragment key={index}>
-                  {fact.color ? (
-                    <span key={index} className={classes.color}>
-                      {fact.text}
-                    </span>
-                  ) : (
-                    <span key={index}>{fact.text}</span>
-                  )}
-                </Fragment>
-              ))}
-            </div>
-          ))}
+          {facts.map((item) => {
+            const Icon = item.id === "tgBlog" ? media.tgBlog?.icon : null;
+
+            return (
+              <div key={item.id} className={classes.fact}>
+                {item.fact.map((fact, index) => (
+                  <Fragment key={index}>
+                    {fact.color ? (
+                      item.id === "tgBlog" && Icon ? (
+                        <div className={classes.inLine}>
+                          <span className={classes.color}>{fact.text}</span>
+                          <a
+                            href={media.tgBlog.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Icon className={classes.icon} />
+                          </a>
+                        </div>
+                      ) : (
+                        <span className={classes.color}>{fact.text}</span>
+                      )
+                    ) : (
+                      <span>{fact.text}</span>
+                    )}
+                  </Fragment>
+                ))}
+              </div>
+            );
+          })}
         </div>
       </Section>
     </>
