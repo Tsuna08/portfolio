@@ -28,7 +28,7 @@
         ]
       },
       {
-        "id": "fact-2",
+        "id": "tgBlog",
         "fact": [
           { "text": "I blog about my life on " },
           { "text": "Telegram", "color": true }

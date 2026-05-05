@@ -38,6 +38,18 @@
   color: var(--secondary-color);
 }
 
-.color {
+.color,
+.icon {
   color: var(--color);
+}
+
+.inLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
 }

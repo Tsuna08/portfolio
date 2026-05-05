@@ -4,7 +4,13 @@ import LinkedIn from "@/public/icons/linkedIn.svg";
 import Telegram from "@/public/icons/telegram.svg";
 import Vk from "@/public/icons/vk.svg";
 
-export type MediaKey = "git" | "telegram" | "vk" | "linkedIn" | "email";
+export type MediaKey =
+  | "git"
+  | "telegram"
+  | "tgBlog"
+  | "vk"
+  | "linkedIn"
+  | "email";
 export interface SocialLink {
   url: string;
   title: string;
@@ -20,6 +26,11 @@ export const media: Record<MediaKey, SocialLink> = {
   telegram: {
     url: "tg://resolve?domain=tsuna_dev",
     title: "tsuna_dev",
+    icon: Telegram,
+  },
+  tgBlog: {
+    url: "tg://resolve?domain=tsuna_channel",
+    title: "TsunaLife",
     icon: Telegram,
   },
   vk: {
