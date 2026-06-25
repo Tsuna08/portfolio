@@ -2,7 +2,8 @@
 
 import { Link } from "@/src/i18n/navigation";
 import { Button, Checkbox, FormField } from "@/src/shared";
-import { useLocale, useTranslations } from "next-intl";
+import emailjs from "@emailjs/browser";
+import { useTranslations } from "next-intl";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import classes from "./ContactModal.module.scss";
 
@@ -41,7 +42,9 @@ export const ContactModal = ({
   submitBtnLabel,
 }: ContactModalProps) => {
   const t = useTranslations("ContactModal");
-  const locale = useLocale();
+  const EMAILJS_SERVICE_ID = "service_a262v2m";
+  const EMAILJS_TEMPLATE_ID = "template_yxa1p3j";
+  const EMAILJS_PUBLIC_KEY = "xRsLDXtWf32LOQjCT";
 
   const modalRef = useRef<HTMLDivElement>(null);
   const firstInputRef = useRef<HTMLInputElement>(null);
@@ -168,32 +171,29 @@ export const ContactModal = ({
 
     setIsLoading(true);
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, locale }),
-      });
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          title: formData.title,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
 
-      if (!response.ok) {
-        let errorMessage = t("errorMessage");
-        const contentType = response.headers.get("content-type");
+      if (result.text === "OK") {
+        setSuccess(true);
+        setFormData(INITIAL_FORM_DATA);
 
-        if (contentType?.includes("application/json")) {
-          try {
-            const errorData = await response.json();
-            errorMessage = errorData.message || errorMessage;
-          } catch {}
-        }
-        throw new Error(errorMessage);
+        setTimeout(() => {
+          onClose();
+          setSuccess(false);
+        }, SUCCESS_TIMEOUT_MS);
+      } else {
+        throw new Error(t("errorMessage"));
       }
-
-      setSuccess(true);
-      setFormData(INITIAL_FORM_DATA);
-
-      setTimeout(() => {
-        onClose();
-        setSuccess(false);
-      }, SUCCESS_TIMEOUT_MS);
     } catch (err) {
       setServerError(err instanceof Error ? err.message : t("errorMessage"));
     } finally {
