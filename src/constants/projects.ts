@@ -57,8 +57,8 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/blog.png",
     buttons: [
       {
-        link: "https://github.com/Tsuna08/blog",
-        label: "git",
+        link: "https://blog-three-jade-87.vercel.app",
+        label: "project",
       },
     ],
   },
@@ -67,8 +67,8 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/pizza.png",
     buttons: [
       {
-        link: "https://github.com/Tsuna08/pizza-and-co",
-        label: "git",
+        link: "https://pizza-project-five-navy.vercel.app",
+        label: "project",
       },
     ],
   },
