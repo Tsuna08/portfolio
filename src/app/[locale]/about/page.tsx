@@ -51,7 +51,7 @@ export default async function About({ params }: AboutProps) {
                     {fact.color ? (
                       item.id === "tgBlog" && Icon ? (
                         <div className={classes.inLine}>
-                          <span className={classes.color}>{fact.text}</span>
+                          <span className={classes.color}>{fact.text} </span>
                           <a
                             href={media.tgBlog.url}
                             target="_blank"
@@ -61,10 +61,10 @@ export default async function About({ params }: AboutProps) {
                           </a>
                         </div>
                       ) : (
-                        <span className={classes.color}>{fact.text}</span>
+                        <span className={classes.color}>{fact.text} </span>
                       )
                     ) : (
-                      <span>{fact.text}</span>
+                      <span>{fact.text} </span>
                     )}
                   </Fragment>
                 ))}
