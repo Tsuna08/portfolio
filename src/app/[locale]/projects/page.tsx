@@ -38,7 +38,7 @@ export default async function Projects({ params }: ProjectsProps) {
             <Project
               key={item}
               title={project.title}
-              technologies={apps[item].technologies}
+              stack={apps[item].stack}
               image={apps[item].image}
               description={project.description}
               buttons={apps[item].buttons}

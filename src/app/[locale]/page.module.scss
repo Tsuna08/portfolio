@@ -145,6 +145,7 @@
   align-items: flex-start;
   width: 100%;
   gap: 1rem;
+  margin-bottom: 5%;
   & > :nth-child(n) {
     width: calc(100% / 3.1);
   }
@@ -157,90 +158,5 @@
     & > :nth-child(3) {
       display: none;
     }
-  }
-}
-
-.containerGrid {
-  display: grid;
-  grid-template-areas:
-    ". . . box box"
-    "dots1 . . box box"
-    "dots1 . . box box"
-    ". . dots2 dots2 ."
-    "logo . dots2 dots2 ."
-    "logo . . . smallBox"
-    "logo . . . .";
-  row-gap: 1rem;
-  column-gap: 1rem;
-  width: 349px;
-  height: 282px;
-
-  & > img {
-    max-width: none;
-    height: unset;
-  }
-  @include tablet {
-    height: 250px;
-    transform: scale(0.8) translateX(-18%) translateY(-12%);
-  }
-  @include mobile {
-    height: 215px;
-    transform: scale(0.7) translateX(-18%) translateY(-20%);
-  }
-}
-
-.boxDots1,
-.boxDots2 {
-  transform: scale(0.75);
-  color: var(--secondary-color);
-}
-
-.boxDots1 {
-  grid-area: dots1;
-  transform: scale(0.75) translate(2.3rem, 0.4rem);
-}
-
-.boxDots2 {
-  grid-area: dots2;
-  transform: scale(0.75) translate(2.3rem, 0.4rem);
-}
-
-.boxLogo {
-  grid-area: logo;
-  color: var(--primary-color);
-  transform: scale(1.146) translate(1.8rem, 0.5rem);
-}
-
-.box {
-  width: 86px;
-  height: 86px;
-  grid-area: box;
-}
-
-.smallBox {
-  width: 52px;
-  height: 52px;
-  grid-area: smallBox;
-}
-
-.box,
-.smallBox {
-  border: 1px solid var(--secondary-color);
-}
-
-.skills {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 600px;
-  height: fit-content;
-  @include xxxl {
-    max-width: unset;
-  }
-  @include tablet {
-    max-width: 100%;
-    justify-content: flex-start;
   }
 }

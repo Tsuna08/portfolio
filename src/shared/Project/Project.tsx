@@ -8,7 +8,7 @@ interface ProjectProps {
   title?: string;
   description?: string;
   image?: string;
-  technologies?: string[];
+  stack?: string[];
   buttons?: { link: string; label: ButtonKey }[];
   translator: Record<ButtonKey, string>;
 }
@@ -17,7 +17,7 @@ export const Project = ({
   title,
   description,
   image,
-  technologies,
+  stack,
   buttons,
   translator,
 }: ProjectProps) => {
@@ -35,7 +35,7 @@ export const Project = ({
           loading="lazy"
         />
       )}
-      <div className={classes.skills}>{technologies?.join(", ")}</div>
+      <div className={classes.skills}>{stack?.join(", ")}</div>
       <div className={classes.content}>
         <h5 className={classes.title}>{title}</h5>
         <p className={classes.description}>{description}</p>

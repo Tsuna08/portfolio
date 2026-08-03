@@ -1,8 +1,13 @@
 import { media } from "@/src/constants/media";
 import { routes } from "@/src/constants/routes";
-import { SkillId, skills } from "@/src/constants/skills";
+import {
+  skillsList,
+  softSkillId,
+  softSkillsIcon,
+} from "@/src/constants/skills";
+import { SkillsSection } from "@/src/features";
 import { createI18nMetadata } from "@/src/metadata";
-import { Section, SkillBox } from "@/src/shared";
+import { Section, Skill } from "@/src/shared";
 import { AboutMe } from "@/src/widget";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
@@ -19,7 +24,10 @@ export default async function About({ params }: AboutProps) {
   const tHeader = await getTranslations("Header");
   const tAbout = await getTranslations("AboutMe");
   const tSkills = await getTranslations("Skills");
-  const skillsTitle: { id: SkillId; title: string }[] = tSkills.raw("skills");
+  const softSkills: { id: softSkillId; title: string }[] =
+    tSkills.raw("softSkills");
+  const softSkillsList = tSkills.raw("softSkillsList");
+
   const facts: { id: string; fact: { text: string; color?: true }[] }[] =
     tAbout.raw("facts");
 
@@ -33,11 +41,11 @@ export default async function About({ params }: AboutProps) {
         titleTag="h1"
       />
       <Section title={tHeader("skills")} showLine={false}>
-        <div className={classes.skills}>
-          {skillsTitle.map((item) => (
-            <SkillBox key={item.id} title={item.title} list={skills[item.id]} />
-          ))}
-        </div>
+        <SkillsSection
+          titles={softSkills}
+          skills={softSkillsList}
+          icons={softSkillsIcon}
+        />
       </Section>
       <Section title={tAbout("my-fun-facts")} showLine={false}>
         <div className={classes.facts}>
@@ -71,6 +79,13 @@ export default async function About({ params }: AboutProps) {
               </div>
             );
           })}
+        </div>
+      </Section>
+      <Section title={tHeader("stack")} showLine={false}>
+        <div className={classes.stack}>
+          {skillsList.map((item, index) => (
+            <Skill key={index} skill={item} />
+          ))}
         </div>
       </Section>
     </>

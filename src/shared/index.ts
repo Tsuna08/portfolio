@@ -5,6 +5,7 @@ export { LanguageSwitcher } from "./LanguageSwitcher";
 export { Media } from "./Media";
 export { Project } from "./Project";
 export { Section } from "./Section";
+export { Skill } from "./Skill";
 export { SkillBox } from "./SkillBox";
 export { Title } from "./Title";
 export { TitleSection } from "./TitleSection";

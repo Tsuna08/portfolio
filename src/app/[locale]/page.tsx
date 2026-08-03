@@ -2,12 +2,12 @@ import Dots from "@/public/icons/dots.svg";
 import OutlineLogo from "@/public/icons/outline_logo.svg";
 import { apps, mainApps } from "@/src/constants/projects";
 import { routes } from "@/src/constants/routes";
-import { SkillId, skills } from "@/src/constants/skills";
+import { softSkillId, softSkillsIcon } from "@/src/constants/skills";
+import { SkillsSection } from "@/src/features";
 import { Link } from "@/src/i18n/navigation";
 import { createI18nMetadata } from "@/src/metadata";
-import { Project, Section, SkillBox } from "@/src/shared";
+import { Project, Section } from "@/src/shared";
 import { AboutMe, ContactButton, Contacts } from "@/src/widget";
-import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import classes from "./page.module.scss";
@@ -24,7 +24,11 @@ export default async function Home({ params }: HomeProps) {
   const tTitle = await getTranslations("Header");
   const tProjects = await getTranslations("Projects");
   const tSkills = await getTranslations("Skills");
-  const skillsTitle = tSkills.raw("skills") as { id: SkillId; title: string }[];
+  const skillsTitle = tSkills.raw("softSkills") as {
+    id: softSkillId;
+    title: string;
+  }[];
+  const softSkillsList = tSkills.raw("softSkillsList");
   const buttonsTitle = tProjects.raw("buttons");
 
   return (
@@ -68,7 +72,7 @@ export default async function Home({ params }: HomeProps) {
               <Project
                 key={item}
                 title={project.title}
-                technologies={apps[item].technologies}
+                stack={apps[item].stack}
                 image={apps[item].image}
                 description={project.description}
                 buttons={apps[item].buttons}
@@ -81,18 +85,11 @@ export default async function Home({ params }: HomeProps) {
 
       {/* Навыки */}
       <Section title={tTitle("skills")}>
-        <div className={classes.containerGrid}>
-          <Dots className={classes.boxDots1} alt="Dots picture" />
-          <Dots className={classes.boxDots2} alt="Dots picture" />
-          <OutlineLogo className={classes.boxLogo} alt="Outline logo icon" />
-          <div className={classes.box} />
-          <div className={classes.smallBox} />
-        </div>
-        <div className={cn(classes.skills)}>
-          {skillsTitle.map((item) => (
-            <SkillBox key={item.id} title={item.title} list={skills[item.id]} />
-          ))}
-        </div>
+        <SkillsSection
+          titles={skillsTitle}
+          skills={softSkillsList}
+          icons={softSkillsIcon}
+        />
       </Section>
 
       {/* Секция – обо мне */}
