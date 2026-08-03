@@ -11,7 +11,7 @@ export type AppsKey =
 export type ButtonKey = "git" | "project";
 
 export interface AppsContent {
-  technologies: string[];
+  stack: string[];
   buttons: { link: string; label: ButtonKey }[];
   image?: string;
 }
@@ -33,7 +33,7 @@ export const smallApps: AppsKey[] = [
 
 export const apps: Record<AppsKey, AppsContent> = {
   portfolio: {
-    technologies: ["React", "Next", "TS", "SCSS", "i18n"],
+    stack: ["React", "Next", "TS", "SCSS", "i18n"],
     image: "/projects/portfolio.png",
     buttons: [
       {
@@ -43,7 +43,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   waterSeal: {
-    technologies: ["HTML", "CSS", "JS", "Fabric.JS"],
+    stack: ["HTML", "CSS", "JS", "Fabric.JS"],
     image: "/projects/waterSeal.png",
     buttons: [
       {
@@ -53,7 +53,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   blog: {
-    technologies: ["React", "CSS", "TS", "React Hook Form", "Yup", "Firebase"],
+    stack: ["React", "CSS", "TS", "React Hook Form", "Yup", "Firebase"],
     image: "/projects/blog.png",
     buttons: [
       {
@@ -63,7 +63,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   pizza: {
-    technologies: ["React", "TS", "SCSS", "Axios", "React Hook Form", "Yup"],
+    stack: ["React", "TS", "SCSS", "Axios", "React Hook Form", "Yup"],
     image: "/projects/pizza.png",
     buttons: [
       {
@@ -73,7 +73,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   cinema: {
-    technologies: ["Vue 3", "TS", "Pinia", "Vue Router", "Vite", "Axios"],
+    stack: ["Vue 3", "TS", "Pinia", "Vue Router", "Vite", "Axios"],
     image: "/projects/cinema.png",
     buttons: [
       {
@@ -83,7 +83,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   diary: {
-    technologies: ["React", "TypeScript", "Vite", "SCSS"],
+    stack: ["React", "TypeScript", "Vite", "SCSS"],
     buttons: [
       {
         link: " https://github.com/Tsuna08/personal-diary",
@@ -92,7 +92,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   calendar: {
-    technologies: ["Vue 3", "TypeScript", "CSS", "i18n"],
+    stack: ["Vue 3", "TypeScript", "CSS", "i18n"],
     buttons: [
       {
         link: "https://github.com/Tsuna08/calendar",
@@ -101,7 +101,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   myCharity: {
-    technologies: ["HTML", "CSS", "Sass", "Grid", "Layout", "Flexbox"],
+    stack: ["HTML", "CSS", "Sass", "Grid", "Layout", "Flexbox"],
     buttons: [
       {
         link: "https://github.com/Tsuna08/my-charity",
@@ -110,7 +110,7 @@ export const apps: Record<AppsKey, AppsContent> = {
     ],
   },
   petsShop: {
-    technologies: ["HTML", "CSS", "Grid", "Layout", "Flexbox"],
+    stack: ["HTML", "CSS", "Grid", "Layout", "Flexbox"],
     buttons: [
       {
         link: "https://github.com/Tsuna08/pets-shop",

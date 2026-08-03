@@ -1,0 +1,46 @@
+@use "@/src/app/mixins" as *;
+
+.skills {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 5%;
+
+  @media (max-width: $breakpoint-lg-sm) {
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    margin-bottom: unset;
+  }
+
+  @include between($breakpoint-xs, $breakpoint-lg-sm) {
+    .divider:nth-child(3n + 1) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 130px;
+  margin: auto 1.5rem;
+  border-right: 1px solid var(--secondary-color);
+
+  @media (max-width: $breakpoint-lg-sm) {
+    margin: auto 1rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 85%;
+    height: 1px;
+    border-right: none;
+    border-bottom: 1px solid var(--secondary-color);
+    margin: auto;
+  }
+}

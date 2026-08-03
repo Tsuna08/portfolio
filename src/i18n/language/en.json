@@ -96,18 +96,55 @@
     ]
   },
   "Skills": {
-    "skills": [
-      { "id": "languages", "title": "Languages" },
-      { "id": "other", "title": "Other" },
-      { "id": "frameworks", "title": "Frameworks" },
-      { "id": "tools", "title": "Tools" }
-    ]
+    "softSkills": [
+      { "id": "development", "title": "Development" },
+      { "id": "layout", "title": "Frontend" },
+      { "id": "tools", "title": "Tools" },
+      { "id": "stack", "title": "stack" }
+    ],
+    "softSkillsList": {
+      "development": [
+        "SPA & Web Applications",
+        "REST API Integration",
+        "Admin Panels & Dashboards",
+        "Performance Optimization & Refactoring"
+      ],
+      "layout": [
+        "Figma to Code",
+        "Responsive & Cross-Browser Development",
+        "Pixel-Perfect Implementation",
+        "UI Animations"
+      ],
+      "tools": [
+        "Git & Team Collaboration",
+        "ESLint",
+        "Prettier",
+        "Vite",
+        "Testing",
+        "CI/CD"
+      ],
+      "stack": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS/SCSS",
+        "Redux Toolkit",
+        "Firebase",
+        "Axios",
+        "Yup"
+      ]
+    }
   },
   "Contacts": {
     "title": "Contact | TsunaDev — Frontend Developer",
     "subTitle": "Who I am?",
     "contactTitle": "Message me here",
-    "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
+    "info": [
+      "Need a new website or want to improve an existing one?",
+      "Let's discuss your project and find the best solution."
+    ],
     "allMedia": "all-media",
     "description": "Ready to discuss a project? Message me on Telegram, VK, or Email. Open to freelance work and long-term collaborations.",
     "keywords": [
@@ -134,7 +171,8 @@
     "about-me": "about-me",
     "projects": "projects",
     "contacts": "contacts",
-    "skills": "skills"
+    "skills": "skills",
+    "stack": "stack"
   },
   "BurgerMenu": { "closeMenu": "Close menu", "openMenu": "Open menu" },
   "Footer": {

@@ -98,18 +98,55 @@
     ]
   },
   "Skills": {
-    "skills": [
-      { "id": "languages", "title": "Языки" },
-      { "id": "other", "title": "Другое" },
-      { "id": "frameworks", "title": "Фреймворки" },
-      { "id": "tools", "title": "Инструменты" }
-    ]
+    "softSkills": [
+      { "id": "development", "title": "Разработка" },
+      { "id": "layout", "title": "Верстка" },
+      { "id": "tools", "title": "Инструменты" },
+      { "id": "stack", "title": "Технологии" }
+    ],
+    "softSkillsList": {
+      "development": [
+        "SPA и web-приложений",
+        "Интеграция с REST API",
+        "Admin панели и dashboard",
+        "Оптимизация и рефакторинг"
+      ],
+      "layout": [
+        "Верстка по макетам Figma",
+        "Адаптиваня и кроссбраузерная верстка",
+        "Pixel Perfect",
+        "Анимация"
+      ],
+      "tools": [
+        "Git и командная работа",
+        "ESLint",
+        "Prettier",
+        "Vite",
+        "Тестирование",
+        "CI/CD"
+      ],
+      "stack": [
+        "React",
+        "Next.js",
+        "Typescript",
+        "JavaScript",
+        "HTML",
+        "CSS/SCSS",
+        "Redux Toolkit",
+        "Firebase",
+        "Axios",
+        "Yup"
+      ]
+    }
   },
   "Contacts": {
     "title": "Контакты | TsunaDev — Frontend разработчик",
     "subTitle": "Кто я?",
     "contactTitle": "Напишите мне",
-    "info": "Меня интересуют возможности работы фрилансером. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
+    "info": [
+      "Необходимо создать новый проект или нужна помощь с существующим проектом?",
+      "Напишите мне - обсудим детали и найдем лучшее решение."
+    ],
     "allMedia": "все-контакты",
     "description": "Готовы обсудить проект? Напишите в Telegram, VK или Email. Открыта к коммерческим заказам и долгосрочному сотрудничеству.",
     "keywords": [
@@ -140,7 +177,8 @@
     "about-me": "обо-мне",
     "projects": "проекты",
     "contacts": "контакты",
-    "skills": "навыки"
+    "skills": "навыки",
+    "stack": "стек"
   },
   "BurgerMenu": { "closeMenu": "Закрыть меню", "openMenu": "Открыть меню" },
   "Footer": {

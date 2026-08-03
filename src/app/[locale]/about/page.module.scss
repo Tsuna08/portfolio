@@ -1,22 +1,9 @@
 @use "@/src/app/mixins" as *;
-
-.skills {
-  width: 80%;
+.stack {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
-  @include tablet {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-  }
-  @include xxl {
-    width: 70%;
-  }
-  @include xxxl {
-    width: 60%;
-  }
+  margin-bottom: 5%;
 }
 
 .facts {

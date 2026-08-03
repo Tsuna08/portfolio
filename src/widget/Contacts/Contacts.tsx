@@ -29,7 +29,13 @@ export const Contacts = async ({
       showLine={showLine}
       titleTag={titleTag}
     >
-      <p className={classes.contactInfo}>{info}</p>
+      <div>
+        {info.map((item, index) => (
+          <p key={index} className={classes.contactInfo}>
+            {item}
+          </p>
+        ))}
+      </div>
       <div className={classes.contacts}>
         <h6>{tContacts("contactTitle")}</h6>
         {contactLinks.map((item) => {
