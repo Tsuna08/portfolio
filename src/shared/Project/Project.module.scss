@@ -1,12 +1,15 @@
 @use "@/src/app/mixins" as *;
 
 .box {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
 }
 
 .photo {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
   width: 100%;
+
   @include xxl {
     max-height: unset;
   }
@@ -21,19 +24,50 @@
   }
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px solid var(--secondary-color);
-  padding: 0.3rem 0.5rem;
-  color: var(--secondary-color);
-}
-
 .content {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 1rem 1rem 1rem;
+  padding: 1rem;
   gap: 1rem;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titleGrid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.3rem;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  grid-row: span 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: var(--secondary-color);
+
+  p:not(:last-child)::after {
+    content: " ◦ ";
+  }
 }
 
 .title {
@@ -42,4 +76,19 @@
 
 .description {
   color: var(--secondary-color);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }

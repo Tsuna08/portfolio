@@ -8,7 +8,7 @@
   justify-content: center;
   gap: 1.5rem;
   max-width: 515px;
-  color: var(--secondary-color);
+
   @include between($breakpoint-md, $breakpoint-lg) {
     margin-top: -1rem;
   }
@@ -24,6 +24,10 @@
   @include tablet {
     max-width: unset;
   }
+}
+
+.infoText {
+  color: var(--secondary-color);
 }
 
 .container {

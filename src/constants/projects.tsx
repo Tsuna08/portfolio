@@ -1,3 +1,10 @@
+import Book from "@/public/projects/bookmark.svg";
+import Calendar from "@/public/projects/calendar.svg";
+import Heart from "@/public/projects/heart.svg";
+import Pet from "@/public/projects/pet.svg";
+import Git from "@/public/icons/git.svg";
+import ArrowUpRight from "@/public/icons/arrow-up-right.svg";
+
 export type AppsKey =
   | "portfolio"
   | "waterSeal"
@@ -14,13 +21,22 @@ export interface AppsContent {
   stack: string[];
   buttons: { link: string; label: ButtonKey }[];
   image?: string;
+  icon?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-export const mainApps: AppsKey[] = ["portfolio", "blog", "waterSeal"];
+export const buttonIcon: Record<
+  ButtonKey,
+  React.FC<React.SVGProps<SVGSVGElement>>
+> = {
+  git: Git,
+  project: ArrowUpRight,
+};
+
+export const mainApps: AppsKey[] = ["portfolio", "waterSeal", "blog"];
 export const completeApps: AppsKey[] = [
   "portfolio",
-  "blog",
   "waterSeal",
+  "blog",
   "pizza",
   "cinema",
 ];
@@ -47,28 +63,40 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/waterSeal.png",
     buttons: [
       {
+        link: "https://water-seal-five.vercel.app",
+        label: "project",
+      },
+      {
         link: "https://github.com/Tsuna08/water-seal",
         label: "git",
       },
     ],
   },
   blog: {
-    stack: ["React", "CSS", "TS", "React Hook Form", "Yup", "Firebase"],
+    stack: ["React", "TS", "Firebase", "React Hook Form"],
     image: "/projects/blog.png",
     buttons: [
       {
         link: "https://blog-three-jade-87.vercel.app",
         label: "project",
       },
+      {
+        link: "https://github.com/TsunaDev-Code/blog",
+        label: "git",
+      },
     ],
   },
   pizza: {
-    stack: ["React", "TS", "SCSS", "Axios", "React Hook Form", "Yup"],
+    stack: ["React", "TS", "Axios", "React Hook Form"],
     image: "/projects/pizza.png",
     buttons: [
       {
         link: "https://pizza-project-five-navy.vercel.app",
         label: "project",
+      },
+      {
+        link: "https://github.com/TsunaDev-Code/pizza-and-co",
+        label: "git",
       },
     ],
   },
@@ -77,6 +105,10 @@ export const apps: Record<AppsKey, AppsContent> = {
     image: "/projects/cinema.png",
     buttons: [
       {
+        link: "https://prism-cinema.vercel.app",
+        label: "project",
+      },
+      {
         link: "https://github.com/Tsuna08/prism-cinema",
         label: "git",
       },
@@ -84,6 +116,7 @@ export const apps: Record<AppsKey, AppsContent> = {
   },
   diary: {
     stack: ["React", "TypeScript", "Vite", "SCSS"],
+    icon: Book,
     buttons: [
       {
         link: " https://github.com/Tsuna08/personal-diary",
@@ -93,6 +126,7 @@ export const apps: Record<AppsKey, AppsContent> = {
   },
   calendar: {
     stack: ["Vue 3", "TypeScript", "CSS", "i18n"],
+    icon: Calendar,
     buttons: [
       {
         link: "https://github.com/Tsuna08/calendar",
@@ -102,6 +136,7 @@ export const apps: Record<AppsKey, AppsContent> = {
   },
   myCharity: {
     stack: ["HTML", "CSS", "Sass", "Grid", "Layout", "Flexbox"],
+    icon: Heart,
     buttons: [
       {
         link: "https://github.com/Tsuna08/my-charity",
@@ -111,6 +146,7 @@ export const apps: Record<AppsKey, AppsContent> = {
   },
   petsShop: {
     stack: ["HTML", "CSS", "Grid", "Layout", "Flexbox"],
+    icon: Pet,
     buttons: [
       {
         link: "https://github.com/Tsuna08/pets-shop",

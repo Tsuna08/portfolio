@@ -35,7 +35,9 @@ export const AboutMe = async ({
     >
       <div className={classes.info}>
         {info.map((item) => (
-          <p key={item}>{item}</p>
+          <p key={item} className={classes.infoText}>
+            {item}
+          </p>
         ))}
         {showReadMore && (
           <Link href="/about">

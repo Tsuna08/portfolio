@@ -30,7 +30,7 @@
   width: 1px;
   height: 130px;
   margin: auto 1.5rem;
-  border-right: 1px solid var(--secondary-color);
+  border-right: 1px solid var(--border-color);
 
   @media (max-width: $breakpoint-lg-sm) {
     margin: auto 1rem;
@@ -40,7 +40,7 @@
     width: 85%;
     height: 1px;
     border-right: none;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
     margin: auto;
   }
 }

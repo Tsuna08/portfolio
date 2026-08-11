@@ -24,8 +24,10 @@
 
   /* Интерфейсные элементы */
   --overlay-bg: rgba(0, 0, 0, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(141, 147, 159, 0.5);
   --hover-bg: rgba(255, 255, 255, 0.1);
+
+  --border-radius: 3px;
 }
 
 @media (prefers-color-scheme: light) {
