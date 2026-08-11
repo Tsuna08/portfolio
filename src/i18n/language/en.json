@@ -3,16 +3,15 @@
     "title": "Anna Tsyganova | TsunaDev — Frontend Developer",
     "subTitle": "Tsyganova Anna is a ",
     "colorTitle": "frontend developer",
-    "description": "I build modern websites and web interfaces by combining thoughtful design with reliable technology. The result is a fast, user-friendly, and scalable product.",
+    "description": "Frontend Developer: I create modern websites and web applications with React and Vue.js. I build fast, responsive, and user-friendly interfaces.",
     "contactBtn": "Discuss your project",
     "keywords": [
       "frontend developer",
-      "portfolio",
-      "React developer",
-      "Vue.js web development",
-      "frontend portfolio",
-      "remote frontend engineer",
-      "frontend portfolio"
+      "React web development",
+      "Vue.js developer",
+      "web application development",
+      "website development",
+      "responsive web development"
     ]
   },
   "AboutMe": {
@@ -25,11 +24,12 @@
     ],
     "description": "My background, tech stack, and development approach. Specializing in React, Vue.js, and web performance. Open to remote & freelance work.",
     "keywords": [
+      "frontend developer",
       "frontend developer experience",
-      "web developer bio",
-      "React specialist background",
-      "freelance developer",
-      "remote web developer"
+      "React developer",
+      "Vue.js developer",
+      "TypeScript developer",
+      "technology stack"
     ],
     "readMoreBtn": "Read more",
     "my-fun-facts": "my-fun-facts",
@@ -86,13 +86,13 @@
       "git": "GitHub",
       "project": "Project"
     },
-    "description": "Frontend portfolio: responsive sites, SPAs & web apps. Stack: React, Vue.js, TypeScript. View live demos & source code.",
+    "description": "Frontend development projects: websites, SPAs, and web applications built with React, Vue.js, and TypeScript. Explore examples, live demos, and source code.",
     "keywords": [
-      "web development portfolio",
-      "React project examples",
-      "Vue.js case projects",
+      "frontend project portfolio",
       "frontend projects",
-      "web apps showcase"
+      "React projects",
+      "Vue.js projects",
+      "web applications"
     ]
   },
   "Skills": {
@@ -146,13 +146,13 @@
       "Let's discuss your project and find the best solution."
     ],
     "allMedia": "all-media",
-    "description": "Ready to discuss a project? Message me on Telegram, VK, or Email. Open to freelance work and long-term collaborations.",
+    "description": "Looking to discuss a website or web application? Contact me via Telegram, VK, or email. Open to commercial projects and collaboration.",
     "keywords": [
-      "contact frontend developer",
-      "hire web developer",
-      "freelance developer contact",
-      "web development collaboration",
-      "remote frontend hire"
+      "frontend developer contact",
+      "contact a frontend developer",
+      "website development",
+      "web development services",
+      "developer collaboration"
     ]
   },
   "NotFound": {
@@ -163,7 +163,7 @@
   "Privacy": {
     "title": "Privacy Policy | TsunaDev — Frontend Developer",
     "subTitle": "Privacy Policy",
-    "description": "Information about the personal data processing policy and privacy protection rules.",
+    "description": "Privacy policy for the processing and protection of personal data on the TsunaDev website.",
     "keywords": ["privacy policy", "personal data processing", "privacy"]
   },
   "Header": {
