@@ -40,6 +40,7 @@ export default async function Projects({ params }: ProjectsProps) {
               title={project.title}
               stack={apps[item].stack}
               image={apps[item].image}
+              icon={apps[item].icon}
               description={project.description}
               buttons={apps[item].buttons}
               translator={buttonsTitle}

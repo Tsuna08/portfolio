@@ -1,38 +1,38 @@
 {
   "portfolio": {
     "title": "Portfolio",
-    "description": "A personal portfolio website featuring a responsive design, fast performance, and multilingual support"
+    "description": "Personal portfolio with a responsive interface and multilingual support."
   },
   "waterSeal": {
     "title": "WaterSeal",
-    "description": "Online text-on-image editor"
+    "description": "Online image editor for adding text and watermarks."
   },
   "blog": {
     "title": "Blog",
-    "description": "A blog is a platform for publishing articles"
+    "description": "A platform for publishing and managing articles with user authentication."
   },
   "pizza": {
     "title": "Pizza & CO",
-    "description": "A pizza ordering application"
+    "description": "Pizza online store with a catalog, shopping cart, and checkout."
   },
   "cinema": {
     "title": "PRISM Cinema",
-    "description": "An application for booking movie tickets"
+    "description": "Movie ticket booking service with seat selection and showtimes."
   },
   "diary": {
     "title": "Personal Diary",
-    "description": "A small project to practice basic React skills"
+    "description": "A small application for managing personal notes."
   },
   "calendar": {
     "title": "Calendar",
-    "description": "A multilingual calendar component built with Vue 3 and TypeScript"
+    "description": "A multilingual calendar component built with Vue 3 and TypeScript."
   },
   "myCharity": {
     "title": "My Charity",
-    "description": "A landing page for a charity organization"
+    "description": "A project for a charity organization that provides assistance to people in need."
   },
   "petsShop": {
     "title": "Pets Shop",
-    "description": "A landing page for a pet shop"
+    "description": "A one-page website for a pet shop."
   }
 }
