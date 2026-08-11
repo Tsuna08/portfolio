@@ -39,7 +39,7 @@ export default async function Home({ params }: HomeProps) {
           <h1>
             {tHome("subTitle")} <span>{tHome("colorTitle")}</span>
           </h1>
-          <p>{tHome("description")}</p>
+          <p>{tHome("info")}</p>
           <ContactButton label={tHome("contactBtn")} />
         </div>
         <div className={classes.container}>
